@@ -17,6 +17,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
 import { Mycontext } from "../context/Context";
+import Search from "./products/Search";
 
 function Nav() {
   const { username } = useContext(Mycontext);
@@ -103,15 +104,9 @@ function Nav() {
       </MDBContainer>
 
       <MDBContainer fluid className="justify-content-center me-5">
-        <form className="navbar-search d-flex input-group w-50 me-4 ">
-          <input
-            type="search"
-            className="form-control"
-            placeholder="Search Here"
-            aria-label="Search"
-          />
-          <MDBBtn color="primary">Search</MDBBtn>
-        </form>
+        <div >
+          <Search/>
+        </div>
         <MDBNavbarBrand className="me-2" href="#">
           <MDBBtn className="btn btn-white" onClick={() => navcart()}>
             <img

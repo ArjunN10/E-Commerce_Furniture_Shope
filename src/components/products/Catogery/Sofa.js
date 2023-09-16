@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../../Nav';
-import { useContext } from 'react'
+import { useContext ,useEffect} from 'react'
 import { Mycontext } from '../../../context/Context'
 import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer,
     // MDBRow, MDBCol
@@ -13,6 +13,9 @@ function Sofa() {
     const {productsList}=useContext(Mycontext)
     const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'sofa')
     // console.log(FilterProduct);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div>
           

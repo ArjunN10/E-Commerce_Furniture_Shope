@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useEffect } from 'react'
 import {MDBCard,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardFooter,MDBCardImage,MDBBtn,MDBRipple} from 'mdb-react-ui-kit';
 import { Mycontext } from '../../../context/Context';
 import { useNavigate } from 'react-router-dom';
@@ -9,6 +9,9 @@ function Allproducts() {
     const {productsList}=useContext(Mycontext)
     // console.log(productsList);
     const navigate=useNavigate()
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   return (
     <>

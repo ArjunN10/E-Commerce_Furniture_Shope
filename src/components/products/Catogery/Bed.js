@@ -10,6 +10,7 @@ const navigate=useNavigate()
   const {productsList}=useContext(Mycontext)
   const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'bed')
   console.log(FilterProduct);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

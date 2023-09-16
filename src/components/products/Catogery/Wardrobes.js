@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext,useEffect } from 'react'
 import Nav from '../../Nav';
 import { Mycontext } from '../../../context/Context'
 import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer,
@@ -10,6 +10,9 @@ function Wardrobes() {
 const navigate=useNavigate()
   const {productsList}=useContext(Mycontext)
   const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'wardrobe')
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
 <div  className=' sticky-top'>
