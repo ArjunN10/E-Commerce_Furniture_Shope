@@ -86,18 +86,15 @@ function ProductCart() {
         </MDBCard>
       </MDBCol>
     </MDBRow>
+    {/* <MDBRow> */}
+  <MDBCol>
+    <MDBCard className='d-flex m-auto w-100  mt-2 mb-0  '>  
+    <MDBCardImage  src={require("../images/cover3new.png")}  className="card-img-top" alt="Photos" />
+    </MDBCard> 
+    </MDBCol>
+    {/* </MDBRow> */}
     </MDBCardGroup>
-
-
-
-    {/* <div className='d-flex m-auto w-100 mt-5'>
-        
-        <img src={require("./images/cover(1).jpg")}   className="card-img-top" alt="Photos" />
-    </div>  */}
-
-    
-   </div>
-   
+     </div>
   )
 }
 

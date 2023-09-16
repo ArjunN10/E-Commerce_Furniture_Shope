@@ -1,22 +1,26 @@
 import React from 'react'
-import { useContext } from 'react'
+import { useContext,useEffect } from 'react'
 import Nav from '../../Nav';
 import { Mycontext } from '../../../context/Context'
 import {MDBCard,MDBCardImage, MDBCardOverlay,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer, } from 'mdb-react-ui-kit';
 import {  useNavigate } from 'react-router-dom';
+
 function Bed() {
 const navigate=useNavigate()
   const {productsList}=useContext(Mycontext)
   const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'bed')
   console.log(FilterProduct);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
 
 <div  className=' sticky-top'>
      <Nav/>
     </div>
-    {/* <MDBCard background='dark' className='text-white'>
-      <MDBCardImage overlay src='https://i.pinimg.com/564x/51/e6/c4/51e6c4b5741c3d9126230a7704acd659.jpg' alt='...' />
+    <MDBCard background='dark' className='text-white w-100 h-5' >
+      <MDBCardImage overlay src='https://img.freepik.com/premium-photo/black-sofa-black-living-room-interior-with-copy-space_43614-843.jpg?w=900' alt='...' />
       <MDBCardOverlay>
         <MDBCardTitle>Card title</MDBCardTitle>
         <MDBCardText>
@@ -25,7 +29,7 @@ const navigate=useNavigate()
         </MDBCardText>
         <MDBCardText>Last updated 3 mins ago</MDBCardText>
       </MDBCardOverlay>
-    </MDBCard> */}
+    </MDBCard>
 <MDBContainer className="container py-5">
   <div className="d-flex flex-wrap ">
     {FilterProduct.map((productsList) => (

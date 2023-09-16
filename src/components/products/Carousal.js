@@ -21,7 +21,7 @@ function Carousal() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={2}
-        src={require("./images/carosel-2.jpg")}        
+        src={require("./images/carosil-4.jpg")}        
         alt='Photos'
       >
         <h5 style={{fontFamily:"revert-layer", color:"white"}}>"Quality Furniture, Delivered to Your Doorstep: Redefine your living spaces effortlessly."</h5>
