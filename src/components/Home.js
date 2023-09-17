@@ -1,7 +1,7 @@
 import Profile from '../profile/Profile'
 import Nav from './Nav'
 import Carousal from './products/Carousal'
-import ProductCart from './products/Catogery/ProductCart'
+import ProductCart from './ProductCart'
 
 
 function Home() {

@@ -9,8 +9,8 @@ import {
 } from "mdb-react-ui-kit";
 // import { productsList } from './Productslist';
 import { useNavigate, useParams } from "react-router-dom";
-import { Mycontext } from "../../../context/Context";
-import Nav from "../../Nav";
+import { Mycontext } from "../context/Context";
+import Nav from "./Nav";
 
 
 function Productview() {

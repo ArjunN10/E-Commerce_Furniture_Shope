@@ -14,8 +14,8 @@ import Wardrobes from './components/products/Catogery/Wardrobes';
 import Chairs from './components/products/Catogery/Chairs';
 import Footer from './components/Footer';
 import Profile from './profile/Profile';
-import Productview from './components/products/Catogery/Productview';
-import Allproducts from './components/products/Catogery/Allproducts';
+import Productview from './components/Productview';
+import Allproducts from './components/Allproducts';
 import Addcart from './components/Addcart';
 import Paymentpage from './components/Paymentpage';
 

@@ -51,7 +51,7 @@ const Search = () => {
               <img src={item.src} className="w-25" alt={item.name} />{" "}
               {item.name}
             </MDBDropdownItem>
-          ))}
+          )).splice(0,6)}
         </MDBDropdownMenu>
       </MDBDropdown>
     </div>

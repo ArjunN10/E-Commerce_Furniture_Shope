@@ -400,8 +400,8 @@ export const productsList = [
     {
       id: 42,
       name: "Large Wooden Wardrobe",
-      type: "https://m.media-amazon.com/images/I/91h0oDLuL6L._AC_UL600_FMwebp_QL65_.jpg",
-      src: "wardrobe1.jpg",
+      type: "Wardrobe",
+      src: "https://m.media-amazon.com/images/I/71fNj+Qw5EL._AC_UL480_FMwebp_QL65_.jpg",
       price: "$599",
       price2: 599,
       description: "A spacious wooden wardrobe for your bedroom.",

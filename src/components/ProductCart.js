@@ -1,11 +1,15 @@
 import React  from 'react'
-import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBRow,MDBCol,MDBCardGroup} from 'mdb-react-ui-kit';
+import {MDBCard,MDBCarousel,MDBCarouselItem,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBRow,MDBCol,MDBCardGroup} from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 // import { Mycontext } from '../../context/Context';
+import { useEffect } from 'react';
 
 function ProductCart() {
   // const {productsList}=useContext(Mycontext)
   const navigate=useNavigate()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div>
@@ -89,11 +93,34 @@ function ProductCart() {
     </MDBRow>
     {/* <MDBRow> */}
   <MDBCol>
-    <MDBCard className='d-flex m-auto w-100  mt-2 mb-0  '>  
-    <MDBCardImage  src={require("../images/cover3new.png")}  className="card-img-top" alt="Photos" />
+    <MDBCard className='d-flex m-auto w-100  mt-2 mb-0 '>  
+    <MDBCarousel showControls fade>
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={1}
+        src={require("../components/products/images/cover8new.jpg")}
+        alt='photos'
+      />
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={2}
+        src={require("../components/products/images/cover4newnew.jpg")} 
+        alt='photos'
+      />
+      <MDBCarouselItem
+        className='w-100 d-block'
+        itemId={3}
+        src={require("../components/products/images/cover9.png")} 
+        alt='photos'
+      />
+    </MDBCarousel>
+    <MDBCardImage  src={require("../components/products/images/4415159.jpg")}
+     onClick={()=>navigate('/allproducts')} 
+     className="card-img-top" alt="Photos" />
     </MDBCard> 
     </MDBCol>
     {/* </MDBRow> */}
+   
     </MDBCardGroup>
      </div>
   )

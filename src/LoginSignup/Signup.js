@@ -9,7 +9,6 @@ import {
   MDBCardImage,
   MDBInput,
   MDBIcon,
-  // MDBCheckbox
 } from "mdb-react-ui-kit";
 import { Mycontext } from "../context/Context";
 import { useNavigate } from "react-router-dom";
@@ -29,9 +28,7 @@ function Signup() {
     if (emailvalid.length !== 0) {
       alert("Email already exist");
     } else {
-      setuser([
-        ...user,
-        {
+      setuser([...user,{
           name: name,
           email: email,
           password: password,
@@ -93,7 +90,7 @@ function Signup() {
                     type="password"
                   />
                 </div>
-                <MDBBtn className="mb-4" size="lg">
+                <MDBBtn className="mb-4" size="lg" onSubmit={()=>navigate('/login')}>
                   Register
                 </MDBBtn>
                 <p className="ms-4">

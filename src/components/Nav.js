@@ -20,20 +20,27 @@ import { Mycontext } from "../context/Context";
 import Search from "./products/Search";
 
 function Nav() {
-  const { username } = useContext(Mycontext);
-  console.log(username);
+  const { username, setusername } = useContext(Mycontext);
   const [showBasic, setShowBasic] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(!!username); // Check if user is initially logged in
   const navigate = useNavigate();
+  
   const navcart = () => {
-    if (username) {
+    if (loggedIn) {
       navigate("/addcart");
     } else {
-      alert("login in to account");
+      alert("Login to your account");
     }
   };
 
+  const handleLogout = () => {
+    setusername(""); 
+    setLoggedIn(false); // Set the login state to false
+  };
+
   return (
-    <MDBNavbar expand="lg" light bgColor="light" className="my-3 ">
+    <>
+    <MDBNavbar expand="lg" light bgColor="light" className="my-4">
       <MDBContainer fluid>
         <MDBNavbarBrand className="mb-lg-1 me-4">
           <h3 style={{ fontFamily: "revert-layer" }}>
@@ -51,7 +58,7 @@ function Nav() {
         </MDBNavbarToggler>
 
         <MDBCollapse navbar show={showBasic}>
-          <MDBNavbarNav className="mr-auto  mb-lg-1 ">
+          <MDBNavbarNav className="mr-auto mb-lg-1">
             <MDBNavbarItem>
               <MDBNavbarLink
                 active
@@ -72,7 +79,7 @@ function Nav() {
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle
-                  tag="a"
+                tag='a'
                   className="nav-link"
                   style={{ fontFamily: "cursive" }}
                   role="button"
@@ -90,7 +97,6 @@ function Nav() {
                     Sofas
                   </MDBDropdownItem>
                   <MDBDropdownItem onClick={() => navigate("/chair")}>
-                    {" "}
                     Chairs
                   </MDBDropdownItem>
                   <MDBDropdownItem onClick={() => navigate("/wardrobe")}>
@@ -107,55 +113,42 @@ function Nav() {
         <div>
           <Search />
         </div>
-        <MDBNavbarBrand className="me-2" href="#">
-          <MDBBtn className="btn btn-white" onClick={() => navcart()}>
-            <img
-              src="https://img.icons8.com/?size=2x&id=TdZUZUq3XNh6&format=gif"
-              alt="cart"
-              className="img-fluid"
-            />
-            <MDBNavbarLink>Cart</MDBNavbarLink>
+        {loggedIn ?
+         (
+          <MDBBtn
+            outline
+            rippleColor="secondary"
+            color="secondary"
+            onClick={handleLogout}
+            className="me-2"
+            type="button"
+          >
+            Logout
           </MDBBtn>
-        </MDBNavbarBrand>
-
-        <MDBBtn
-          outline
-          rippleColor="success"
-          color="success"
-          onClick={() => navigate("/login")}
-          className="me-2"
-          type="button"
-        >
-          Login
-        </MDBBtn>
-        {/* <MDBBtn outline  rippleColor='secondary'color='secondary' onClick={()=>navigate("/signup")} className="me-2" type='button'>
-          Signup
-        </MDBBtn> */}
-        <MDBBtn
-          outline
-          rippleColor="secondary"
-          color="secondary"
-          onClick={() => navigate("/")}
-          className="me-2"
-          type="button"
-        >
-          Logout
-        </MDBBtn>
-
-        <MDBDropdown >
-          <MDBDropdownToggle className="shadow-none bg-transparent border-0 overflow-hidden ">
+          ) : (
+          <MDBBtn
+            outline
+            rippleColor="success"
+            color="success"
+            onClick={() => navigate("/login")}
+            className="me-2"
+            type="button"
+          >
+            Login
+          </MDBBtn>
+          )}
+        <MDBBtn className="btn btn-white ">
           <img
             src="https://img.icons8.com/?size=2x&id=85750&format=png"
             alt="profile"
-            className="me-2 my-2 img-fliud"
+            className="img-fluid"
           />
           {username}
-          <MDBDropdownItem></MDBDropdownItem>
-          <MDBDropdownItem>Settings</MDBDropdownItem>
-          </MDBDropdownToggle>
-        </MDBDropdown>
+        </MDBBtn>
       </MDBContainer>
     </MDBNavbar>
+    </>
   );
 }
+
 export default Nav;

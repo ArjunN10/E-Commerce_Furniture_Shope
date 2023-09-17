@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../../Nav';
-import { useContext } from 'react'
+import { useContext ,useEffect} from 'react'
 import { Mycontext } from '../../../context/Context'
 import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer,} from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,10 @@ function  Chairs() {
   const {productsList}=useContext(Mycontext)
   const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'chair')
   // console.log(FilterProduct);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
 <div  className=' sticky-top'>
