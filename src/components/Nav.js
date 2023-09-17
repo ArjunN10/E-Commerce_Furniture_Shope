@@ -77,34 +77,65 @@ function Nav() {
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle
-                tag='a'
-                  className="nav-link"
-                  style={{ fontFamily: "cursive" }}
-                  role="button"
-                >
-                  Categories
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="text-center">
-                  <MDBDropdownItem onClick={() => navigate("/table")}>
-                    Tables
-                  </MDBDropdownItem>
-                  <MDBDropdownItem onClick={() => navigate("/bed")}>
-                    Beds
-                  </MDBDropdownItem>
-                  <MDBDropdownItem onClick={() => navigate("/sofa")}>
-                    Sofas
-                  </MDBDropdownItem>
-                  <MDBDropdownItem onClick={() => navigate("/chair")}>
-                    Chairs
-                  </MDBDropdownItem>
-                  <MDBDropdownItem onClick={() => navigate("/wardrobe")}>
-                    Wardrobes
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
+  <MDBDropdown>
+    <MDBDropdownToggle
+      tag='a'
+      className="nav-link"
+      style={{ fontFamily: "cursive" }}
+      role="button"
+    >
+      Categories
+    </MDBDropdownToggle>
+    <MDBDropdownMenu className="text-center">
+      <MDBDropdownItem onClick={() => navigate("/table")}>
+      <img
+          src="https://img.icons8.com/?size=2x&id=30190&format=png"
+          alt="icon"
+          className="img-fluid " 
+          style={{ maxWidth: '20px', height: 'auto' }}
+        />
+       
+        Tables
+      </MDBDropdownItem>
+      <MDBDropdownItem onClick={() => navigate("/bed")}>
+      <img
+          src="https://img.icons8.com/?size=2x&id=zVuzYLxp4Euc&format=png"
+          alt="icon"
+          className="img-fluid " 
+          style={{ maxWidth: '20px', height: 'auto' }}
+        />
+        Beds
+      </MDBDropdownItem>
+      <MDBDropdownItem onClick={() => navigate("/sofa")}>
+      <img
+          src="https://img.icons8.com/?size=2x&id=80481&format=png"
+          alt="icon"
+          className="img-fluid " 
+          style={{ maxWidth: '20px', height: 'auto' }}
+        />
+        Sofas
+      </MDBDropdownItem>
+      <MDBDropdownItem onClick={() => navigate("/chair")}>
+      <img
+          src="https://img.icons8.com/?size=2x&id=kLCDEKFEmsPz&format=png"
+          alt="icon"
+          className="img-fluid " 
+          style={{ maxWidth: '20px', height: 'auto' }}
+        />
+        Chairs
+      </MDBDropdownItem>
+      <MDBDropdownItem onClick={() => navigate("/wardrobe")}>
+      <img
+          src="https://img.icons8.com/?size=2x&id=81148&format=png"
+          alt="icon"
+          className="img-fluid " 
+          style={{ maxWidth: '20px', height: 'auto' }}
+        />
+        Wardrobes
+      </MDBDropdownItem>
+    </MDBDropdownMenu>
+  </MDBDropdown>
+</MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBContainer>

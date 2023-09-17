@@ -3,8 +3,12 @@ import {
     MDBCarousel,
     MDBCarouselItem,
   } from 'mdb-react-ui-kit';
+  import { useEffect } from 'react';
   
 function Carousal() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     
     <div id='home'>

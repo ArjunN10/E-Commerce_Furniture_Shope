@@ -2,19 +2,24 @@ import React  from 'react'
 import {MDBCard,MDBCarousel,MDBCarouselItem,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBRow,MDBCol,MDBCardGroup} from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 // import { Mycontext } from '../../context/Context';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function ProductCart() {
   // const {productsList}=useContext(Mycontext)
   const navigate=useNavigate()
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   
   return (
     <div>
         <div className='d-flex m-auto w-100 mt-5'>
-        <img src="https://t4.ftcdn.net/jpg/05/67/53/87/240_F_567538708_Pe1gAKXfcBsuwzv83Ag0CylD2yMMRIqg.jpg"className="card-img-top" alt="Photos" />
+        <img src="https://t4.ftcdn.net/jpg/05/67/53/87/240_F_567538708_Pe1gAKXfcBsuwzv83Ag0CylD2yMMRIqg.jpg"
+        className="card-img-top" 
+        alt="Photos" 
+        onClick={()=>navigate('/allproducts')}
+        />
     </div> 
   <MDBCardGroup style={{background:"rgb(231, 240, 248)"}} id="products">
   <h3 style={{fontFamily:"inherit"}} className='w-100 mt-5 text-center' id='category'>Category</h3>
