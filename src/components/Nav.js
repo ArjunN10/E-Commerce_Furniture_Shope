@@ -33,7 +33,7 @@ function Nav() {
   };
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light" className="my-4 ">
+    <MDBNavbar expand="lg" light bgColor="light" className="my-3 ">
       <MDBContainer fluid>
         <MDBNavbarBrand className="mb-lg-1 me-4">
           <h3 style={{ fontFamily: "revert-layer" }}>
@@ -104,8 +104,8 @@ function Nav() {
       </MDBContainer>
 
       <MDBContainer fluid className="justify-content-center me-5">
-        <div >
-          <Search/>
+        <div>
+          <Search />
         </div>
         <MDBNavbarBrand className="me-2" href="#">
           <MDBBtn className="btn btn-white" onClick={() => navcart()}>
@@ -141,14 +141,19 @@ function Nav() {
         >
           Logout
         </MDBBtn>
-        <MDBNavbarBrand>
+
+        <MDBDropdown >
+          <MDBDropdownToggle className="shadow-none bg-transparent border-0 overflow-hidden ">
           <img
             src="https://img.icons8.com/?size=2x&id=85750&format=png"
             alt="profile"
-            className="img-fluid  "
+            className="me-2 my-2 img-fliud"
           />
           {username}
-        </MDBNavbarBrand>
+          <MDBDropdownItem></MDBDropdownItem>
+          <MDBDropdownItem>Settings</MDBDropdownItem>
+          </MDBDropdownToggle>
+        </MDBDropdown>
       </MDBContainer>
     </MDBNavbar>
   );

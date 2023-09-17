@@ -7,7 +7,6 @@ import {
   MDBCol,
   MDBRow,
   MDBInput,
-  MDBCheckbox,
   MDBIcon,
 } from "mdb-react-ui-kit";
 import { Link, useNavigate } from "react-router-dom";
@@ -42,19 +41,24 @@ function Login() {
           className="mx-5 mb-5 p-5 shadow-5 "
           style={{
             marginTop: "50px",
-            background: "hsla(0, 0%, 100%, 0.8)",
             backdropFilter: "blur(30px)",
           }}
         >
-          <h3 className="text-center">LOGIN</h3>
-
-          <MDBCardBody className="p-5 text-center">
-            <form onSubmit={login}>
+          <MDBCardBody className="ms-auto me-auto text-center ">
+          <MDBRow>
+            <MDBCol
+              md="10"
+              lg="6"
+              className="order-2 order-lg-1 d-flex flex-column align-items-center"
+            >
+          <h3 className="text-center mb-5">LOGIN</h3>
+            <form onSubmit={login} className="w-auto">
               <MDBInput
                 wrapperClass="mb-4"
                 label="Email address"
                 id="email"
                 type="email"
+
                 required
               />
               <MDBInput
@@ -76,6 +80,8 @@ function Login() {
                  <Link to={"/"}>Home</Link>
               </p>
              </form>
+             </MDBCol>
+             </MDBRow>
           </MDBCardBody>
         </MDBCard>
       </MDBContainer>

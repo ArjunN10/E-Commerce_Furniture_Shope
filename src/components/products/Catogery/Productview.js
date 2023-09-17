@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import {
   MDBContainer,
   MDBRow,
@@ -11,6 +11,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { Mycontext } from "../../../context/Context";
 import Nav from "../../Nav";
+
 
 function Productview() {
   const navigate = useNavigate();
@@ -39,6 +40,12 @@ function Productview() {
       navigate("/");
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+
   return (
     <>
       <div className=" sticky-top">

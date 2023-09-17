@@ -17,6 +17,7 @@ import Profile from './profile/Profile';
 import Productview from './components/products/Catogery/Productview';
 import Allproducts from './components/products/Catogery/Allproducts';
 import Addcart from './components/Addcart';
+import Paymentpage from './components/Paymentpage';
 
 function App() {
 const [user,setuser]=useState([])
@@ -39,6 +40,7 @@ const [addcart,setaddcart]=useState([])
       <Route path='/productview/:id' element={<Productview/>}/>
       <Route path='/allproducts' element={<Allproducts/>}/>
       <Route path='/addcart' element={<Addcart/>}/>
+      <Route path='/bill' element={<Paymentpage/>}/>
      </Routes>
      </Mycontext.Provider>
      <div className='mt-3'>

@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function ProductCart() {
   // const {productsList}=useContext(Mycontext)
   const navigate=useNavigate()
+  
   return (
     <div>
         <div className='d-flex m-auto w-100 mt-5'>

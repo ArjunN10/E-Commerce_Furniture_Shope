@@ -139,7 +139,7 @@ function Addcart() {
                       style={{ position: "absolute", bottom: "0" }}
                     >
                       <MDBBtn
-                        onClick={() => navigate("/Pyment")}
+                        onClick={() => navigate("/bill")}
                         className=""
                         block
                         size="lg"
