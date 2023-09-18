@@ -63,7 +63,6 @@ function Nav() {
         >
           <MDBIcon icon="bars" fas />
         </MDBNavbarToggler>
-
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mr-auto mb-lg-1">
             <MDBNavbarItem>
@@ -78,7 +77,7 @@ function Nav() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink onClick={() => navigate("/allproducts")}>
+              <MDBNavbarLink onClick={() => navigate("/allproducts")} >
                 Products
               </MDBNavbarLink>
             </MDBNavbarItem>

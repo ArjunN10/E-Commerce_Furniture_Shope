@@ -14,13 +14,13 @@ import { Mycontext } from "../context/Context";
 
 function Login() {
   const navigate = useNavigate();
-  const { user, setusername, username ,setLoggedIn} = useContext(Mycontext);
+  const { user, setusername,setLoggedIn} = useContext(Mycontext);
   const login = (e) => {
     e.preventDefault();
     const eml = e.target.email.value;
     const password = e.target.pwd.value;
-    console.log(eml);
-    console.log(password);
+    // console.log(eml);
+    // console.log(password);
     const filteruser = user.filter((item) => item.email === eml);
     if (filteruser.length !== 0) {
       if (filteruser[0].password === password) {
