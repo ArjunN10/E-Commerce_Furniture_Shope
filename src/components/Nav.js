@@ -41,16 +41,18 @@ function Nav() {
     <>
     <MDBNavbar expand="lg" light bgColor="light" className="my-4">
       <MDBContainer fluid>
-        <MDBNavbarBrand className="mb-lg-1 me-4">
-          {/* <h3 style={{ fontFamily: "revert-layer" }}>
-            W<sub>OOD</sub> G<sub>ALLARY</sub>
-          </h3> */}
-           <img
-                   src={require("../components/products/images/logo2.jpg")}  
+        <MDBNavbarBrand className="mb-lg-0 me-4">
+              <img
+                   src={require("../components/products/images/logoicon.jpg")}  
                   alt="Shop Logo"
                   className="img-fluid"
-                  style={{ maxWidth: "100px" }}
+                  style={{ maxWidth: "70px" }}
                 />
+             <h5 style={{ fontFamily: "cursive" }}>
+                  WILD  &nbsp;WOOD <br />
+                    GALLERY
+                </h5>
+
         </MDBNavbarBrand>
 
         <MDBNavbarToggler
