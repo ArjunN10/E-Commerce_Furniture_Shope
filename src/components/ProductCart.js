@@ -96,7 +96,6 @@ function ProductCart() {
         </MDBCard>
       </MDBCol>
     </MDBRow>
-    {/* <MDBRow> */}
   <MDBCol>
     <MDBCard className='d-flex m-auto w-100  mt-2 mb-0 '>  
     <MDBCarousel showControls fade>
@@ -124,9 +123,7 @@ function ProductCart() {
      onClick={()=>navigate('/allproducts')} 
      className="card-img-top" alt="Photos" />
     </MDBCard> 
-    </MDBCol>
-    {/* </MDBRow> */}
-   
+    </MDBCol>   
     </MDBCardGroup>
      </div>
   )
