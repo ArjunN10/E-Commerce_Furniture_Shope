@@ -15,22 +15,22 @@ import Chairs from './components/products/Catogery/Chairs';
 import Footer from './components/Footer';
 import Profile from './profile/Profile';
 import Productview from './components/Productview';
-import Allproducts from './components/Allproducts';
-import Addcart from './components/Addcart';
-import Paymentpage from './components/Paymentpage';
+import Allproducts from './components/products/Catogery/Allproducts';
+import Addcart from './components/products/Catogery/Addcart';
+import Paymentpage from './components/products/Catogery/Paymentpage';
 
 function App() {
 const [user,setuser]=useState([])
 const [username,setusername]=useState([])
 const [addcart,setaddcart]=useState([])
+const [loggedIn, setLoggedIn] = useState(true);
   return (
     <>
-    <Mycontext.Provider value={{productsList,user,setuser,username,setusername,addcart,setaddcart}}>
+    <Mycontext.Provider value={{productsList,user,setuser,username,setusername,addcart,setaddcart,loggedIn, setLoggedIn}}>
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
-      <Route path='/profile' element={<Profile/>}/>
 
       <Route path='/sofa' element={<Sofa/>}/>
       <Route path='/table' element={<Tables/>}/>

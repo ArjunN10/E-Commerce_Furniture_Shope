@@ -12,7 +12,7 @@ import {
         MDBTypography,
       } from "mdb-react-ui-kit";
     import { useNavigate } from "react-router-dom";
-    import { Mycontext } from "../context/Context";
+    import { Mycontext } from "../../../context/Context";
 
 function Addcart() {
     const { addcart, setaddcart } = useContext(Mycontext);

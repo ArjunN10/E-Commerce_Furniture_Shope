@@ -1,8 +1,8 @@
 import React, { useContext,useEffect } from 'react'
 import {MDBCard,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardFooter,MDBCardImage,MDBBtn,MDBRipple} from 'mdb-react-ui-kit';
-import { Mycontext } from '../context/Context';
+import { Mycontext } from '../../../context/Context';
 import { useNavigate } from 'react-router-dom';
-import Nav from './Nav';
+import Nav from '../../Nav';
 
 
 function Allproducts() {

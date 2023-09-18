@@ -20,9 +20,9 @@ import { Mycontext } from "../context/Context";
 import Search from "./products/Search";
 
 function Nav() {
-  const { username, setusername } = useContext(Mycontext);
+  const { username, setusername,loggedIn, setLoggedIn } = useContext(Mycontext);
   const [showBasic, setShowBasic] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(!!username); // Check if user is initially logged in
+   // Check if user is initially logged in
   const navigate = useNavigate();
   
   const navcart = () => {
@@ -35,7 +35,7 @@ function Nav() {
 
   const handleLogout = () => {
     setusername(""); 
-    setLoggedIn(false); // Set the login state to false
+    setLoggedIn(!loggedIn); // Set the login state to false
   };
 
   return (
@@ -144,8 +144,9 @@ function Nav() {
         <div>
           <Search />
         </div>
-        {loggedIn ?
+        {loggedIn!=true ?
          (
+          <div className="d-flex">
           <MDBBtn
             outline
             rippleColor="secondary"
@@ -156,7 +157,20 @@ function Nav() {
           >
             Logout
           </MDBBtn>
-          ) : (
+          
+           <MDBNavbarBrand className="me-2" href="#">
+           <MDBBtn className="btn btn-white" onClick={() => navcart()}>
+             <img
+               src="https://img.icons8.com/?size=2x&id=TdZUZUq3XNh6&format=gif"
+               alt="cart"
+               className="img-fluid"
+             />
+             <MDBNavbarLink>Cart</MDBNavbarLink>
+           </MDBBtn>
+         </MDBNavbarBrand>
+         </div>
+          )
+           : (
           <MDBBtn
             outline
             rippleColor="success"

@@ -14,7 +14,7 @@ import { Mycontext } from "../context/Context";
 
 function Login() {
   const navigate = useNavigate();
-  const { user, setusername, username } = useContext(Mycontext);
+  const { user, setusername, username ,setLoggedIn} = useContext(Mycontext);
   const login = (e) => {
     e.preventDefault();
     const eml = e.target.email.value;
@@ -24,6 +24,7 @@ function Login() {
     const filteruser = user.filter((item) => item.email === eml);
     if (filteruser.length !== 0) {
       if (filteruser[0].password === password) {
+        setLoggedIn(prevvalue=>prevvalue=!prevvalue)
         navigate("/");
         setusername(filteruser[0].name);
       } else {
