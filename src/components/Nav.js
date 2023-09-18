@@ -22,11 +22,10 @@ import Search from "./products/Search";
 function Nav() {
   const { username, setusername,loggedIn, setLoggedIn } = useContext(Mycontext);
   const [showBasic, setShowBasic] = useState(false);
-   // Check if user is initially logged in
   const navigate = useNavigate();
   
   const navcart = () => {
-    if (loggedIn) {
+    if (loggedIn===false) {
       navigate("/addcart");
     } else {
       alert("Login to your account");
@@ -43,9 +42,15 @@ function Nav() {
     <MDBNavbar expand="lg" light bgColor="light" className="my-4">
       <MDBContainer fluid>
         <MDBNavbarBrand className="mb-lg-1 me-4">
-          <h3 style={{ fontFamily: "revert-layer" }}>
+          {/* <h3 style={{ fontFamily: "revert-layer" }}>
             W<sub>OOD</sub> G<sub>ALLARY</sub>
-          </h3>
+          </h3> */}
+           <img
+                   src={require("../components/products/images/logo2.jpg")}  
+                  alt="Shop Logo"
+                  className="img-fluid"
+                  style={{ maxWidth: "100px" }}
+                />
         </MDBNavbarBrand>
 
         <MDBNavbarToggler

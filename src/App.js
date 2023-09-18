@@ -13,11 +13,13 @@ import Bed from './components/products/Catogery/Bed';
 import Wardrobes from './components/products/Catogery/Wardrobes';
 import Chairs from './components/products/Catogery/Chairs';
 import Footer from './components/Footer';
-import Profile from './profile/Profile';
-import Productview from './components/Productview';
+// import Profile from './profile/Profile';
+import Productview from './components/products/Catogery/Productview';
 import Allproducts from './components/products/Catogery/Allproducts';
 import Addcart from './components/products/Catogery/Addcart';
 import Paymentpage from './components/products/Catogery/Paymentpage';
+import Externalpage from './components/products/Catogery/Externalpage';
+
 
 function App() {
 const [user,setuser]=useState([])
@@ -41,6 +43,7 @@ const [loggedIn, setLoggedIn] = useState(true);
       <Route path='/allproducts' element={<Allproducts/>}/>
       <Route path='/addcart' element={<Addcart/>}/>
       <Route path='/bill' element={<Paymentpage/>}/>
+      <Route path='/*' element={<Externalpage/>}/>
      </Routes>
      </Mycontext.Provider>
      <div className='mt-3'>

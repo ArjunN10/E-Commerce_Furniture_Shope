@@ -11,15 +11,11 @@ function PaymentPage() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({...formData,[name]: value,});
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle payment processing here
     console.log("Payment submitted:", formData);
    
   };
@@ -32,10 +28,10 @@ function PaymentPage() {
             <MDBCardBody>
               <div className="text-center mb-4">
                 <img
-                  src="/images/logo.png" // Replace with your shop's logo
+                   src={require("../images/logo2.jpg")}  
                   alt="Shop Logo"
                   className="img-fluid"
-                  style={{ maxWidth: "150px" }}
+                  style={{ maxWidth: "100px" }}
                 />
               </div>
               <form onSubmit={handleSubmit}>
@@ -88,16 +84,41 @@ function PaymentPage() {
               </form>
             </MDBCardBody>
           </MDBCard>
-        </MDBCol>
+        <MDBCard className="mb-4 mb-lg-0">
+                <MDBCardBody className="justify-content-center">
+                  <p>
+                    <strong>We accept</strong>
+                  </p>
+                  <img
+                    className="me-2"
+                    width="45px"
+                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                    alt="Visa"
+                  />
+                  <img
+                    className="me-2"
+                    width="45px"
+                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                    alt="American Express"
+                  />
+                  <img
+                    className="me-2"
+                    width="45px"
+                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                    alt="Mastercard"
+                  />
+                  <img
+                    className="me-2"
+                    width="45px"
+                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+                    alt="PayPal acceptance mark"
+                  />
+                </MDBCardBody>
+              </MDBCard>
+              </MDBCol>
       </MDBRow>
       
-      {/* <div className="text-center mt-4">
-        <img
-        src={require("../components/products/images/cover3new.png")} 
-        alt="Furniture Shop"
-          className="img-fluid"
-        />
-      </div> */}
+     
     </MDBContainer>
   );
 }

@@ -13,6 +13,7 @@ import {
       } from "mdb-react-ui-kit";
     import { useNavigate } from "react-router-dom";
     import { Mycontext } from "../../../context/Context";
+import Counter from "../Counter";
 
 function Addcart() {
     const { addcart, setaddcart } = useContext(Mycontext);
@@ -39,13 +40,16 @@ function Addcart() {
         setCount(count - 1);
       }
     };
+
+    const totalsum = addcart.map((priceid) => priceid.price2 * priceid.qty);
+    const totprice = totalsum.reduce((acc, val) => acc + val, 0);
   
     // const calculateTotal = () => {
     //   return addcart.reduce((total, item) => total + item.price * count, 0);
     // };
 
   return (
-    <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+    <section className="h-auto h-custom" style={{ backgroundColor: "#eee" }}>
     <MDBContainer className="h-100 py-5">
       <MDBRow className="justify-content-center align-items-center h-100">
         <MDBCol>
@@ -55,7 +59,7 @@ function Addcart() {
                 <MDBCol lg="7" className="px-5 py-4">
                   <MDBTypography
                     tag="h3"
-                    className="mb-5 pt-2 text-center fw-bold text-uppercase"
+                    className="mb-5 pt-2 text-center fw-bold text-uppercase text-decoration-underline"
                   >
                     Cart products
                   </MDBTypography>
@@ -89,55 +93,31 @@ function Addcart() {
 
                         <div className="d-flex align-items-center">
                           <p className="fw-bold mb-0 me-5 pe-3">
-                          ${item.price2}
+                          Price : ${item.price2}
                           </p>
 
                           <div className="def-number-input number-input safari_only">
-                            <button
-                              style={{ border: "1px" }}
-                              className="minus mx-2 "
-                              onClick={() => decreaseCount(item.id)}
-                            >
-                              {" "}
-                              -
-                            </button>
-                            <span>{count} </span>
-                            <button
-                              className="plus"
-                              style={{ border: "1px" }}
-                              onClick={() => increaseCount(item.id)}
-                            >
-                              +
-                            </button>
+                              <Counter obj={item} />
                           </div>
                         </div>
-                        <MDBTypography tag="h5" className="fw-bold  mx-5">
-                          Total:
-                        </MDBTypography>
-                        <MDBTypography
-                          tag="h5"
-                          style={{ width: "100px" }}
-                          className="fw-bold mx-5 "
-                        >
-                          {item.price2 * count}$
-                        </MDBTypography>
                       </div>
                     </div>
                   ))}
                 </MDBCol>
+              </MDBRow>
 
+              <MDBRow>
                 <MDBCol lg="5" className="px-5 py-4">
-                  <MDBTypography
-                    tag="h3"
-                    className="mb-5 pt-2 text-center fw-bold text-uppercase"
-                  ></MDBTypography>
-
                   <form className="mb-5">
                     <MDBTypography
                       tag="h5"
                       className="fw-bold mb-5"
-                      style={{ position: "absolute", bottom: "0" }}
-                    >
+                      style={{ position: "absolute", bottom: "0" }}>
+                      <MDBTypography
+                    tag="h3"
+                    className="mb-2  text-center fw-bold text-uppercase">
+                    <p>  GRAND TOTAL:  ${totprice}</p>
+                  </MDBTypography>
                       <MDBBtn
                         onClick={() => navigate("/bill")}
                         className=""
@@ -158,7 +138,7 @@ function Addcart() {
                     </MDBTypography>
                   </form>
                 </MDBCol>
-              </MDBRow>
+                </MDBRow>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>

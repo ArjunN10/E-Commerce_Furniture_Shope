@@ -119,7 +119,8 @@ function ProductCart() {
         alt='photos'
       />
     </MDBCarousel>
-    <MDBCardImage  src={require("../components/products/images/4415159.jpg")}
+    <MDBCardImage 
+     src={require("../components/products/images/4415159.jpg")}
      onClick={()=>navigate('/allproducts')} 
      className="card-img-top" alt="Photos" />
     </MDBCard> 
