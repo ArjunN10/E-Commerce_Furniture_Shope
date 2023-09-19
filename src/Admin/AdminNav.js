@@ -36,9 +36,9 @@ export default function AdminNav() {
           <MDBCollapse navbar show={showNavNoTogglerSecond}>
             <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current='page' href='#'>
+                <MDBBtn active aria-current='page' onClick={()=>navigate('/adminhome')}>
                   Home
-                </MDBNavbarLink>
+                </MDBBtn>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink onClick={()=>navigate('/adminAdd')}>ADD PRODUCT</MDBNavbarLink>

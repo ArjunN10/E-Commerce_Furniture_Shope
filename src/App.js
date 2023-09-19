@@ -22,6 +22,7 @@ import Externalpage from './components/products/Catogery/Externalpage';
 import AdminHome from './Admin/AdminAllproduct';
 import AdminAdd from './Admin/AdminAdd';
 import AdminEdit from './Admin/AdminEdit';
+import AdminAllproduct from './Admin/AdminAllproduct';
 
 
 function App() {
@@ -50,6 +51,7 @@ const [loggedIn, setLoggedIn] = useState(true);
       <Route path='/*' element={<Externalpage/>}/>
 
       <Route path='/adminhome' element={<AdminHome/>}/>
+      <Route path='/adminAllproduct' element={<AdminAllproduct/>}/>
       <Route path='/adminAdd' element={<AdminAdd/>}/>
       <Route path='/adminedit' element={<AdminEdit/>}/>
      </Routes>
