@@ -15,13 +15,13 @@ import Nav from "../../Nav";
 
 function Productview() {
   const navigate = useNavigate();
-  const { productsList, addcart, setaddcart, username } = useContext(Mycontext);
+  const { products,setproducts, addcart, setaddcart, username } = useContext(Mycontext);
   const { id } = useParams();
 
   // checking if already added to cart
   const productID = addcart.map((price) => price.id);
   // console.log(productID);
-  const productfilter = productsList.filter((p) => p.id === parseInt(id));
+  const productfilter = products.filter((p) => p.id === parseInt(id));
   const idproduct = (e) => {
     // const id = e.target.id;
 

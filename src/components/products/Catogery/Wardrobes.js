@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Wardrobes() {
 const navigate=useNavigate()
-  const {productsList}=useContext(Mycontext)
-  const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'wardrobe')
+  const {products,setproducts}=useContext(Mycontext)
+  const FilterProduct=products.filter((e)=>e.type.toLowerCase() === 'wardrobe')
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

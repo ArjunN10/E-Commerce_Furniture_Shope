@@ -33,7 +33,7 @@ function Login() {
         alert("Invalid Details");
       }
     }else if(eml=="admin@gmail.com" && password==123){
-      navigate('/')
+      navigate('/adminhome')
       // setLoggedIn(prevvalue=>prevvalue=!prevvalue)
 
     } else {

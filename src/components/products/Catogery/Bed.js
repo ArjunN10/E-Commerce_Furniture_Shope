@@ -7,8 +7,8 @@ import {  useNavigate } from 'react-router-dom';
 
 function Bed() {
 const navigate=useNavigate()
-  const {productsList}=useContext(Mycontext)
-  const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'bed')
+  const {products,setproducts}=useContext(Mycontext)
+  const FilterProduct=products.filter((e)=>e.type.toLowerCase() === 'bed')
   console.log(FilterProduct);
   
   useEffect(() => {

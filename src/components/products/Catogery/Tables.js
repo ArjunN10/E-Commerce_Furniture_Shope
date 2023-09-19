@@ -14,8 +14,8 @@ import { useNavigate } from "react-router-dom";
 
 function Tables() {
   const navigate = useNavigate();
-  const { productsList } = useContext(Mycontext);
-  const FilterProduct = productsList.filter(
+  const { products,setproducts } = useContext(Mycontext);
+  const FilterProduct = products.filter(
     (e) => e.type.toLowerCase() === "table"
   );
   // console.log(FilterProduct);

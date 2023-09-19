@@ -10,8 +10,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Sofa() {
   const navigate=useNavigate()
-    const {productsList}=useContext(Mycontext)
-    const FilterProduct=productsList.filter((e)=>e.type.toLowerCase() === 'sofa')
+    const {products,setproducts}=useContext(Mycontext)
+    const FilterProduct=products.filter((e)=>e.type.toLowerCase() === 'sofa')
     // console.log(FilterProduct);
     useEffect(() => {
       window.scrollTo(0, 0);

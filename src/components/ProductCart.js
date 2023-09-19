@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
 
 function ProductCart() {
-  // const {productsList}=useContext(Mycontext)
   const navigate=useNavigate()
 
   // useEffect(() => {

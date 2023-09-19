@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { Mycontext } from "../../context/Context";
 
 const Search = () => {
-  const { productsList } = useContext(Mycontext);
+  const { products,setproducts } = useContext(Mycontext);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const Search = () => {
     setSearchQuery(e.target.value);
   };
 
-  const filteredProducts = productsList.filter((item) =>
+  const filteredProducts = products.filter((item) =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 

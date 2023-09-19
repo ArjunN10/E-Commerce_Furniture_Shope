@@ -6,7 +6,7 @@ import Nav from '../../Nav';
 
 
 function Allproducts() {
-    const {productsList}=useContext(Mycontext)
+    const {products,setproducts}=useContext(Mycontext)
     // console.log(productsList);
     const navigate=useNavigate()
     useEffect(() => {
@@ -20,9 +20,9 @@ function Allproducts() {
     </div>
     <div className='container mt-2 '>
       <div className='row'>
-        {productsList.map((items)=>(
+        {products.map((items)=>(
             // <div className=''>
-<MDBCard key={productsList.id} className='w-25 mt-2'>
+<MDBCard key={products.id} className='w-25 mt-2'>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src={items.src} fluid alt='Photo' />
         {/* <a>

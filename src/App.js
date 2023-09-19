@@ -20,21 +20,23 @@ import Addcart from './components/products/Catogery/Addcart';
 import Paymentpage from './components/products/Catogery/Paymentpage';
 import Externalpage from './components/products/Catogery/Externalpage';
 import AdminHome from './Admin/AdminHome';
+import AdminAdd from './Admin/AdminAdd';
+import AdminEdit from './Admin/AdminEdit';
 
 
 function App() {
+const [products,setproducts]=useState(productsList)
 const [user,setuser]=useState([])
 const [username,setusername]=useState([])
 const [addcart,setaddcart]=useState([])
 const [loggedIn, setLoggedIn] = useState(true);
   return (
     <>
-    <Mycontext.Provider value={{productsList,user,setuser,username,setusername,addcart,setaddcart,loggedIn, setLoggedIn}}>
+    <Mycontext.Provider value={{products,setproducts,user,setuser,username,setusername,addcart,setaddcart,loggedIn, setLoggedIn}}>
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
-      <Route path='/adminhome' element={<AdminHome/>}/>
 
       <Route path='/sofa' element={<Sofa/>}/>
       <Route path='/table' element={<Tables/>}/>
@@ -46,6 +48,10 @@ const [loggedIn, setLoggedIn] = useState(true);
       <Route path='/addcart' element={<Addcart/>}/>
       <Route path='/bill' element={<Paymentpage/>}/>
       <Route path='/*' element={<Externalpage/>}/>
+
+      <Route path='/adminhome' element={<AdminHome/>}/>
+      <Route path='/adminAdd' element={<AdminAdd/>}/>
+      <Route path='/adminedit' element={<AdminEdit/>}/>
      </Routes>
      </Mycontext.Provider>
      <div className='mt-3'>

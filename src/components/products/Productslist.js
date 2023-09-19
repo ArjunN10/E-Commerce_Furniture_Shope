@@ -24,7 +24,7 @@ export const productsList = [
       id: 3,
       name: "Elegant Leather Sofa",
       type: "Sofa",
-      src: "https://m.media-amazon.com/images/I/51jNLN-ok1L._AC_UL600_FMwebp_QL65_.jpg",
+      src: "https://m.media-amazon.com/images/I/71-u6xZhSjL._AC_UL480_FMwebp_QL65_.jpg",
       price: "$699.99",
       price2: 702,
       description: "A luxurious leather sofa for your living room.",
@@ -108,7 +108,7 @@ export const productsList = [
   
     // Category: Beds
     {
-      id: 13,
+      id: 11,
       name: "Queen Size Wooden Bed",
       type: "Bed",
       src: "https://m.media-amazon.com/images/I/71B-9GEp74L._AC_UL600_FMwebp_QL65_.jpg",
@@ -118,7 +118,7 @@ export const productsList = [
       qty: 1,
     },
     {
-      id: 14,
+      id: 12,
       name: "Metal Platform Bed",
       type: "Bed",
       src: "https://m.media-amazon.com/images/I/815LNLOtPAS._AC_UL600_FMwebp_QL65_.jpg",
@@ -129,7 +129,7 @@ export const productsList = [
     },
    
       {
-        id: 15,
+        id: 13,
         name: "King Size Upholstered Bed",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/71Ih3hH7WmL._AC_UL600_FMwebp_QL65_.jpg",
@@ -139,7 +139,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 16,
+        id: 14,
         name: "Queen Size Canopy Bed",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/71dMjAARFCL._AC_UL600_FMwebp_QL65_.jpg",
@@ -149,7 +149,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 17,
+        id: 15,
         name: "Platform Storage Bed",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/61--f-vDNML._AC_UL600_FMwebp_QL65_.jpg",
@@ -159,7 +159,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 18,
+        id: 16,
         name: "Sleek Modern Bedframe",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/71PaEJbswpL._AC_UL600_FMwebp_QL65_.jpg",
@@ -169,7 +169,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 19,
+        id: 17,
         name: "Rustic Wooden Bed",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/41JUh34dJgL._AC_UL600_FMwebp_QL65_.jpg",
@@ -179,7 +179,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 20,
+        id: 18,
         name: "Adjustable Bed Base",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/81iEC1hQ0SL._AC_UL600_FMwebp_QL65_.jpg",
@@ -189,7 +189,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 21,
+        id: 19,
         name: "Kids' Bunk Bed",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/51jFIDDyxsL._AC_UL600_FMwebp_QL65_.jpg",
@@ -199,7 +199,7 @@ export const productsList = [
         qty: 1
       },
       {
-        id: 22,
+        id: 20,
         name: "Sleigh Bed with Storage",
         type: "Bed",
         src: "https://m.media-amazon.com/images/I/71EGqZq9K0L._AC_UL600_FMwebp_QL65_.jpg",
@@ -215,7 +215,7 @@ export const productsList = [
 
     // Category: Tables
     {
-      id: 25,
+      id: 21,
       name: "Glass Coffee Table",
       type: "Table",
       src: "https://m.media-amazon.com/images/I/91rTGlUZBHL._AC_UL600_FMwebp_QL65_.jpg",
@@ -225,7 +225,7 @@ export const productsList = [
       qty: 1,
     },
     {
-      id: 26,
+      id: 22,
       name: "Dining Room Table Set",
       type: "Table",
       src: "https://m.media-amazon.com/images/I/718wBKTALfL._AC_UL600_FMwebp_QL65_.jpg",
@@ -236,7 +236,7 @@ export const productsList = [
     },
    
       {
-        id: 27,
+        id: 23,
         name: "Solid Oak Dining Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/51jt0OSPpVL._AC_UL600_FMwebp_QL65_.jpg",
@@ -246,7 +246,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 28,
+        id: 24,
         name: "Modern Glass Coffee Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/519esrrcuUL._AC_UL600_FMwebp_QL65_.jpg",
@@ -256,7 +256,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 29,
+        id: 25,
         name: "Rustic Farmhouse Console Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/71l8vElKr8L._AC_UL600_FMwebp_QL65_.jpg",
@@ -266,7 +266,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 30,
+        id: 26,
         name: "Extendable Mahogany Dining Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/71EGyCiNCKL._AC_UL600_FMwebp_QL65_.jpg",
@@ -276,7 +276,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 31,
+        id: 27,
         name: "Vintage Wooden Writing Desk",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/810suGXZdpL._AC_UL600_FMwebp_QL65_.jpg",
@@ -286,7 +286,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 32,
+        id: 28,
         name: "Marble Top Side Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/81XPrQa2x9L._AC_UL600_FMwebp_QL65_.jpg",
@@ -296,7 +296,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 33,
+        id: 29,
         name: "Industrial Bar Height Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/61wa9WbtkbL._AC_UL600_FMwebp_QL65_.jpg",
@@ -306,7 +306,7 @@ export const productsList = [
         qty: 1,
       },
       {
-        id: 34,
+        id: 30,
         name: "Outdoor Patio Dining Table",
         type: "Table",
         src: "https://m.media-amazon.com/images/I/81roI5QAZsL._AC_UL600_FMwebp_QL65_.jpg",
@@ -322,7 +322,7 @@ export const productsList = [
   
     // Category: Chairs
     {
-      id: 35,
+      id: 31,
       name: "Ergonomic Office Chair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/71l9wTKuGhL._AC_UL600_FMwebp_QL65_.jpg",
@@ -332,7 +332,7 @@ export const productsList = [
       qty: 1,
     },
     {
-      id: 36,
+      id: 32,
       name: "Accent Armchair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/81Pat43hEHL._AC_UL600_FMwebp_QL65_.jpg",
@@ -342,7 +342,7 @@ export const productsList = [
       qty: 1,
     },
     {
-      id: 37,
+      id: 33,
       name: "Comfort Plus Chair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/61BrNs7A1QL._AC_UL600_FMwebp_QL65_.jpg",
@@ -352,7 +352,7 @@ export const productsList = [
       qty: 1
     },
     {
-      id: 38,
+      id: 34,
       name: "Classic Wooden Chair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/71j6ruJV5CL._AC_UL600_FMwebp_QL65_.jpg",
@@ -362,7 +362,7 @@ export const productsList = [
       qty: 1
     },
     {
-      id: 39,
+      id: 35,
       name: "Modern Office Chair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/71gdPhhajkL._AC_UL600_FMwebp_QL65_.jpg",
@@ -372,7 +372,7 @@ export const productsList = [
       qty: 1
     },
     {
-      id: 40,
+      id: 36,
       name: "Leather Lounge Chair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/81tZjXLEnOL._AC_UL600_FMwebp_QL65_.jpg",
@@ -381,7 +381,7 @@ export const productsList = [
       description: "Luxurious leather lounge chair for relaxation.",
       qty: 1
     },{
-      id: 41,
+      id: 37,
       name: "Outdoor Patio Chair",
       type: "Chair",
       src: "https://m.media-amazon.com/images/I/61jj19wx-gL._AC_UL600_FMwebp_QL65_.jpg",
@@ -398,7 +398,7 @@ export const productsList = [
   
     // Category: Wardrobes
     {
-      id: 42,
+      id: 38,
       name: "Large Wooden Wardrobe",
       type: "Wardrobe",
       src: "https://m.media-amazon.com/images/I/71fNj+Qw5EL._AC_UL480_FMwebp_QL65_.jpg",
@@ -408,7 +408,7 @@ export const productsList = [
       qty: 1,
     },
     {
-      id: 43,
+      id: 39,
       name: "Sliding Door Wardrobe",
       type: "Wardrobe",
       src: "https://m.media-amazon.com/images/I/51oy1-aFpEL._AC_UL600_FMwebp_QL65_.jpg",
@@ -419,7 +419,7 @@ export const productsList = [
     },
    
     {
-      id: 44,
+      id: 40,
       name: "Vintage Wardrobe with Mirror",
       type: "Wardrobe",
       src: "https://m.media-amazon.com/images/I/71mfbaPza9L._AC_UL600_FMwebp_QL65_.jpg",
@@ -429,7 +429,7 @@ export const productsList = [
       qty: 1
     },
     {
-      id: 45,
+      id: 41,
       name: "Compact Wardrobe with Drawers",
       type: "Wardrobe",
       src: "https://m.media-amazon.com/images/I/71AuqiQCLKL._AC_UL600_FMwebp_QL65_.jpg",
