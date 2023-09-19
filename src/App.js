@@ -19,7 +19,7 @@ import Allproducts from './components/products/Catogery/Allproducts';
 import Addcart from './components/products/Catogery/Addcart';
 import Paymentpage from './components/products/Catogery/Paymentpage';
 import Externalpage from './components/products/Catogery/Externalpage';
-import AdminHome from './Admin/AdminHome';
+import AdminHome from './Admin/AdminAllproduct';
 import AdminAdd from './Admin/AdminAdd';
 import AdminEdit from './Admin/AdminEdit';
 

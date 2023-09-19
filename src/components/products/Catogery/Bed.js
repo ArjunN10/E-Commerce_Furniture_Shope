@@ -9,7 +9,7 @@ function Bed() {
 const navigate=useNavigate()
   const {products,setproducts}=useContext(Mycontext)
   const FilterProduct=products.filter((e)=>e.type.toLowerCase() === 'bed')
-  console.log(FilterProduct);
+  // console.log(FilterProduct);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,7 +20,7 @@ const navigate=useNavigate()
 <div  className=' sticky-top'>
      <Nav/>
     </div>
-    <MDBCard background='dark' className='text-white w-100 h-5' >
+    {/* <MDBCard background='dark' className='text-white w-100 h-5' >
       <MDBCardImage overlay src='https://img.freepik.com/premium-photo/black-sofa-black-living-room-interior-with-copy-space_43614-843.jpg?w=900' alt='...' />
       <MDBCardOverlay>
         <MDBCardTitle>Card title</MDBCardTitle>
@@ -30,7 +30,7 @@ const navigate=useNavigate()
         </MDBCardText>
         <MDBCardText>Last updated 3 mins ago</MDBCardText>
       </MDBCardOverlay>
-    </MDBCard>
+    </MDBCard> */}
 <MDBContainer className="container py-5">
   <div className="d-flex flex-wrap ">
     {FilterProduct.map((productsList) => (

@@ -53,8 +53,7 @@ function Productview() {
                 <MDBCol md="6" mb="4">
                   <MDBCard
                     style={{
-                      boxShadow:
-                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                      boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
                     }}
                   >
                     <img
@@ -67,10 +66,9 @@ function Productview() {
 
                 <MDBCol md="6" mb="4">
                   <MDBCard
-                    className="md-6 "
+                    className="md-6 mb-0"
                     style={{
-                      boxShadow:
-                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                      boxShadow:"rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
                     }}
                   >
                     <div className="p-4">
@@ -128,6 +126,53 @@ function Productview() {
                       </div>
                     </div>
                   </MDBCard>
+                  <hr />
+                  <MDBCard className="mt-0">
+                  <MDBContainer className="container exra-imges">
+              <MDBRow>
+                <MDBCol className=" mt-4 justify-content-center ps-5 "style={{height:"7rem"}}>
+                  <img
+                   src='https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png' 
+                   alt="icon"
+                   style={{ maxWidth: "50px", maxHeight: "50px" }}
+                  />
+                  <p>Returns Policy</p>
+                </MDBCol>
+
+                <MDBCol className="mt-4 justify-content-center ps-5"style={{height:"7rem"}}>
+
+                  <img 
+                   src='https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png' 
+                   alt="icon" 
+                   style={{ maxWidth: "60px", maxHeight: "60px" }}
+                   />
+                  <p>1 year warranty</p>
+
+                </MDBCol>
+
+                <MDBCol className="mt-4 justify-content-center ps-5 "style={{height:"7rem"}}>
+
+                  <img className="more-image" 
+                   src=' https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-top-brand._CB617044271_.png'  
+                   alt="icon" 
+                   style={{ maxWidth: "50px", maxHeight: "50px" }}
+                   />
+                  <p>Top Brand</p>
+
+                </MDBCol>
+                <MDBCol className=" mt-4 justify-content-center ps-5"style={{height:"7rem"}}>
+
+                  <img
+                   src='https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/Secure-payment._CB650126890_.png'  
+                   alt="icon" 
+                   style={{ maxWidth: "50px", maxHeight: "50px" }}
+                   />
+                  <p>Secure transaction</p>
+
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+            </MDBCard>
                   <hr />
                   <MDBTypography className="mt-2 mb-0">
                     <div className="d-flex">

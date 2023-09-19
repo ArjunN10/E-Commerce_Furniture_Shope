@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { Mycontext } from '../context/Context';
 import { useNavigate } from 'react-router-dom';
 
-function AdminHome() {
+function AdminAllproduct() {
   const navigate=useNavigate()
   const {products,setproducts}=useContext(Mycontext)
 
@@ -85,4 +85,4 @@ function AdminHome() {
   )
 }
 
-export default AdminHome
+export default AdminAllproduct
