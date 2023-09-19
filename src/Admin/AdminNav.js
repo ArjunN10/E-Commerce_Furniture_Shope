@@ -22,7 +22,7 @@ export default function AdminNav() {
     <>
       <MDBNavbar expand='lg' light bgColor='light'>
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
+          <MDBNavbarBrand >Navbar</MDBNavbarBrand>
           <MDBNavbarToggler
             type='button'
             data-target='#navbarTogglerDemo02'
@@ -44,7 +44,7 @@ export default function AdminNav() {
                 <MDBNavbarLink onClick={()=>navigate('/adminAdd')}>ADD PRODUCT</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
+                <MDBNavbarLink disabled tabIndex={-1} aria-disabled='true'>
                   Disabled
                 </MDBNavbarLink>
               </MDBNavbarItem>

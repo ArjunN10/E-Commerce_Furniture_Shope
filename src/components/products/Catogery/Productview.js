@@ -1,4 +1,4 @@
-import React, { useContext,useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   MDBContainer,
   MDBRow,
@@ -6,26 +6,22 @@ import {
   MDBBtn,
   MDBCard,
   MDBInput,
+  MDBTypography,
 } from "mdb-react-ui-kit";
 // import { productsList } from './Productslist';
 import { useNavigate, useParams } from "react-router-dom";
 import { Mycontext } from "../../../context/Context";
 import Nav from "../../Nav";
 
-
 function Productview() {
   const navigate = useNavigate();
-  const { products,setproducts, addcart, setaddcart, username } = useContext(Mycontext);
+  const { products, addcart, setaddcart, username } = useContext(Mycontext);
   const { id } = useParams();
 
-  // checking if already added to cart
   const productID = addcart.map((price) => price.id);
   // console.log(productID);
   const productfilter = products.filter((p) => p.id === parseInt(id));
   const idproduct = (e) => {
-    // const id = e.target.id;
-
-    // userlogin condition
     // console.log(username);
     if (username) {
       if (addcart.includes(productfilter[0])) {
@@ -44,8 +40,6 @@ function Productview() {
     window.scrollTo(0, 0);
   }, []);
 
-
-
   return (
     <>
       <div className=" sticky-top">
@@ -57,7 +51,12 @@ function Productview() {
             <MDBContainer className="mt-5">
               <MDBRow>
                 <MDBCol md="6" mb="4">
-                  <MDBCard>
+                  <MDBCard
+                    style={{
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                    }}
+                  >
                     <img
                       src={Pro.src}
                       className="img-fluid hover-shadow card-img-top "
@@ -67,12 +66,20 @@ function Productview() {
                 </MDBCol>
 
                 <MDBCol md="6" mb="4">
-                  <MDBCard className="md-6 mt-5">
+                  <MDBCard
+                    className="md-6 "
+                    style={{
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                    }}
+                  >
                     <div className="p-4">
                       <p className="lead">
                         <span className="me-1">
                           <h1>{Pro.name}</h1>
-                          <del>{Pro.price2}</del>
+                          <h5>
+                            Price :<del>${Pro.price2}</del>
+                          </h5>
                         </span>
                         <h3>
                           <span className="blockquote-footer">
@@ -121,6 +128,72 @@ function Productview() {
                       </div>
                     </div>
                   </MDBCard>
+                  <hr />
+                  <MDBTypography className="mt-2 mb-0">
+                    <div className="d-flex">
+                      <img
+                        src="https://img.icons8.com/?size=2x&id=mnqCs95ap07K&format=png"
+                        style={{ maxWidth: "30px", maxHeight: "30px" }}
+                        alt="offer icon"
+                      />
+                      <h5 className="ms-2 mt-1">Offers</h5>
+                    </div>
+                  </MDBTypography>
+                  <MDBCard>
+                    <div className="container extra-images">
+                      <div className="row">
+                        <div
+                          className="col card mt-2"
+                          style={{
+                            height: "12rem",
+                            boxShadow:
+                              "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                          }}
+                        >
+                          <div className="pt-3">
+                            <h6>Bank Offer</h6>
+                            <p>
+                              Upto ₹1,500.00 discount on SBI Credit CardsUpto
+                              ₹1,500.00 discount on SBI Credit Cards
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="col card mt-2"
+                          style={{
+                            height: "12rem",
+                            boxShadow:
+                              "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                          }}
+                        >
+                          <div className="pt-3">
+                            <h6>No Cost EMI</h6>
+                            <p>
+                              Upto ₹3,377.13 EMI interest savings on ICICI
+                              Credit Card
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="col card mt-2"
+                          style={{
+                            height: "12rem",
+                            boxShadow:
+                              "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                          }}
+                        >
+                          <div className="pt-3">
+                            <h6>Partner Offers</h6>
+                            <p>
+                              Get GST invoice and save up to 28% on business
+                              purchases.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </MDBCard>
+                  <hr />
                 </MDBCol>
               </MDBRow>
             </MDBContainer>
