@@ -14,7 +14,7 @@ import { Mycontext } from "../context/Context";
 
 function Login() {
   const navigate = useNavigate();
-  const { user, setusername,setLoggedIn} = useContext(Mycontext);
+  const { user, setusername,setLoggedIn,AdminID} = useContext(Mycontext);
   const login = (e) => {
     e.preventDefault();
     const eml = e.target.email.value;
@@ -22,19 +22,28 @@ function Login() {
     // console.log(eml);
     // console.log(password);
     const filteruser = user.filter((item) => item.email === eml);
+    // console.log(username);
     if (filteruser.length !== 0) {
       if (filteruser[0].password === password) {
         setLoggedIn(prevvalue=>prevvalue=!prevvalue)
         navigate("/");
         setusername(filteruser[0].name);
-      } else {
+      }
+       else {
         alert("Invalid Details");
       }
+    }else if(eml=="admin@gmail.com" && password==123){
+      navigate('/')
+      // setLoggedIn(prevvalue=>prevvalue=!prevvalue)
+
     } else {
       alert("user not avilable");
     }
   };
-  // console.log(username);
+
+
+
+
   return (
     <div className="w-75 mx-auto ">
       <MDBContainer fluid>
@@ -71,7 +80,7 @@ function Login() {
               />
 
               <div className="d-flex justify-content-between mx-4 mb-4">
-                <a href="!#">Forgot password?</a>
+                <a>Forgot password?</a>
               </div>
               <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
               <p>

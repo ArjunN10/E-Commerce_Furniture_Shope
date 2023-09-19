@@ -19,6 +19,7 @@ import Allproducts from './components/products/Catogery/Allproducts';
 import Addcart from './components/products/Catogery/Addcart';
 import Paymentpage from './components/products/Catogery/Paymentpage';
 import Externalpage from './components/products/Catogery/Externalpage';
+import AdminHome from './Admin/AdminHome';
 
 
 function App() {
@@ -33,6 +34,7 @@ const [loggedIn, setLoggedIn] = useState(true);
       <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/adminhome' element={<AdminHome/>}/>
 
       <Route path='/sofa' element={<Sofa/>}/>
       <Route path='/table' element={<Tables/>}/>
