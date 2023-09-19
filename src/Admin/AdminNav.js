@@ -22,7 +22,7 @@ export default function AdminNav() {
     <>
       <MDBNavbar expand='lg' light bgColor='light'>
         <MDBContainer fluid>
-          <MDBNavbarBrand >Navbar</MDBNavbarBrand>
+          <MDBNavbarBrand >Welcome ADMIN</MDBNavbarBrand>
           <MDBNavbarToggler
             type='button'
             data-target='#navbarTogglerDemo02'
