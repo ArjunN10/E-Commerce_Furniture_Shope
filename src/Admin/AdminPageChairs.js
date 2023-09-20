@@ -1,24 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MDBTable, MDBTableHead, MDBTableBody ,MDBBadge,MDBBtn} from 'mdb-react-ui-kit';
-// import AdminNav from './AdminNav';
-import { useContext } from 'react';
 import { Mycontext } from '../context/Context';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import Adminsidebar from './Adminsidebar';
 
-function AdminAllproduct() {
-  const navigate=useNavigate()
-  const {products,setproducts}=useContext(Mycontext)
 
+function AdminPageChairs() {
+
+        const {products,setproducts}=useContext(Mycontext)
+    console.log(products);
+  const bedslist=products.filter((e)=>e.type.toLowerCase() === 'chair')
+
+    const navigate=useNavigate()
   return (
     <div>
-{/* <div className='sticky-top'>
- 
- <Adminsidebar/>
-</div> */}
-
-<MDBTable responsive className='caption-top'>
-<caption className='ps-5 pt-5'>TOTAL PRODUCTS:{}</caption>
+       <MDBTable responsive className='caption-top'>
+<caption>TOTAL PRODUCTS:{}</caption>
       <MDBTableHead>
         <tr>
           <th scope='col'>ID/</th>
@@ -30,7 +27,7 @@ function AdminAllproduct() {
           <th scope='col'>Offer Price</th>
         </tr>
       </MDBTableHead>
-      {products.map((item,index)=>
+      {bedslist.map((item,index)=>
      
       <MDBTableBody>
         <tr>
@@ -86,5 +83,5 @@ function AdminAllproduct() {
     </div>
   )
 }
-
-export default AdminAllproduct
+   
+export default AdminPageChairs

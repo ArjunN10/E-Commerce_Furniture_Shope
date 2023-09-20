@@ -12,17 +12,22 @@ import Tables from './components/products/Catogery/Tables';
 import Bed from './components/products/Catogery/Bed';
 import Wardrobes from './components/products/Catogery/Wardrobes';
 import Chairs from './components/products/Catogery/Chairs';
-import Footer from './components/Footer';
 // import Profile from './profile/Profile';
 import Productview from './components/products/Catogery/Productview';
 import Allproducts from './components/products/Catogery/Allproducts';
 import Addcart from './components/products/Catogery/Addcart';
 import Paymentpage from './components/products/Catogery/Paymentpage';
 import Externalpage from './components/products/Catogery/Externalpage';
-import AdminHome from './Admin/AdminAllproduct';
+import AdminHome from './Admin/AdminHome';
 import AdminAdd from './Admin/AdminAdd';
 import AdminEdit from './Admin/AdminEdit';
 import AdminAllproduct from './Admin/AdminAllproduct';
+import AdminPageBeds from './Admin/AdminPageBeds';
+import AdminPageSofas from './Admin/AdminPageSofas';
+import AdminPageChairs from './Admin/AdminPageChairs';
+import AdminPageWardrobes from './Admin/AdminPageWardrobes';
+import AdminPageTables from './Admin/AdminPageTables';
+import AdminUserList from './Admin/AdminUserList';
 
 
 function App() {
@@ -30,6 +35,7 @@ const [products,setproducts]=useState(productsList)
 const [user,setuser]=useState([])
 const [username,setusername]=useState([])
 const [addcart,setaddcart]=useState([])
+const [Payment,setpayment]=useState([])
 const [loggedIn, setLoggedIn] = useState(true);
   return (
     <>
@@ -50,15 +56,21 @@ const [loggedIn, setLoggedIn] = useState(true);
       <Route path='/bill' element={<Paymentpage/>}/>
       <Route path='/*' element={<Externalpage/>}/>
 
-      <Route path='/adminhome' element={<AdminHome/>}/>
-      <Route path='/adminAllproduct' element={<AdminAllproduct/>}/>
-      <Route path='/adminAdd' element={<AdminAdd/>}/>
-      <Route path='/adminedit' element={<AdminEdit/>}/>
+  <Route path="/adminhome/" element={<AdminHome />}>
+  <Route path="adminAllproduct" element={<AdminAllproduct />} />
+  <Route path="adminAdd" element={<AdminAdd />} />
+  <Route path="adminedit" element={<AdminEdit />} />
+  <Route path="adminUserlist" element={<AdminUserList/>} />
+  <Route path="AdminPageBeds" element={<AdminPageBeds/>} />
+  <Route path="AdminPageSofas" element={<AdminPageSofas/>} />
+  <Route path="AdminPageChairs" element={<AdminPageChairs/>} />
+  <Route path="AdminPageWardrobes" element={<AdminPageWardrobes/>} />
+  <Route path="AdminPageTables" element={<AdminPageTables/>} />
+   </Route>
+
      </Routes>
      </Mycontext.Provider>
-     <div className='mt-3'>
-      <Footer/>
-     </div>
+     
 
     </>
   );

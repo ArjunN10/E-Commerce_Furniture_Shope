@@ -3,6 +3,7 @@ import {MDBCard,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardFooter,MDBCardImage,
 import { Mycontext } from '../../../context/Context';
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../Nav';
+import Footer from '../../Footer';
 
 
 function Allproducts() {
@@ -44,6 +45,9 @@ function Allproducts() {
     ))}
     </div>
     </div>
+    <div className='mt-3'>
+      <Footer/>
+     </div>
     </>
   )
 }

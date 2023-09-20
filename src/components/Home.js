@@ -1,7 +1,7 @@
-// import Profile from '../profile/Profile'
 import Nav from './Nav'
 import Carousal from './products/Carousal'
 import ProductCart from './ProductCart'
+import Footer from './Footer'
 
 
 function Home() {
@@ -10,8 +10,9 @@ function Home() {
       <div className='sticky-top'><Nav/></div>
       <Carousal/>
         <ProductCart/>
-        {/* <Profile/> */}
-
+        <div className='mt-3'>
+      <Footer/>
+     </div>
     </>
   )
 }

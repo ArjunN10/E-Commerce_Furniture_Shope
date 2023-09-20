@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {MDBContainer,MDBRow,MDBCol,MDBCard,MDBCardBody,MDBInput,MDBBtn,} from "mdb-react-ui-kit";
+import Footer from "../../Footer";
 
 function PaymentPage() {
   const [formData, setFormData] = useState({
@@ -21,6 +22,7 @@ function PaymentPage() {
   };
 
   return (
+    <>
     <MDBContainer className="my-5">
       <MDBRow className="justify-content-center">
         <MDBCol md="6">
@@ -118,8 +120,11 @@ function PaymentPage() {
               </MDBCol>
       </MDBRow>
       
-     
     </MDBContainer>
+      <div className='mt-3'>
+      <Footer/>
+     </div>
+    </>
   );
 }
 

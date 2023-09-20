@@ -12,6 +12,7 @@ import {
 import { useNavigate, useParams } from "react-router-dom";
 import { Mycontext } from "../../../context/Context";
 import Nav from "../../Nav";
+import Footer from "../../Footer";
 
 function Productview() {
   const navigate = useNavigate();
@@ -245,6 +246,9 @@ function Productview() {
           </main>
         </div>
       ))}
+      <div className='mt-3'>
+    <Footer/>
+     </div>
     </>
   );
 }

@@ -14,6 +14,7 @@ import {
     import { useNavigate } from "react-router-dom";
     import { Mycontext } from "../../../context/Context";
 import Counter from "../Counter";
+import Footer from "../../Footer";
 
 function Addcart() {
     const { addcart, setaddcart } = useContext(Mycontext);
@@ -43,10 +44,13 @@ function Addcart() {
 
     const totalsum = addcart.map((priceid) => priceid.price2 * priceid.qty);
     const totprice = totalsum.reduce((acc, val) => acc + val, 0);
+   
+    
   
     // const calculateTotal = () => {
     //   return addcart.reduce((total, item) => total + item.price * count, 0);
     // };
+
 
   return (
     <section className="h-auto h-custom" style={{ backgroundColor: "#eee" }}>
@@ -144,6 +148,9 @@ function Addcart() {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    <div className='mt-3'>
+      <Footer/>
+     </div>
   </section>
 );
 }

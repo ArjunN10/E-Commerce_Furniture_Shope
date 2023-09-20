@@ -34,7 +34,7 @@ function Nav() {
 
   const handleLogout = () => {
     setusername(""); 
-    setLoggedIn(!loggedIn); // Set the login state to false
+    setLoggedIn(!loggedIn); 
   };
 
   return (

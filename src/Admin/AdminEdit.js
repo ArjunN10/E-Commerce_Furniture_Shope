@@ -4,7 +4,7 @@ function AdminEdit() {
   return (
     <div>
         
-        edit
+      
     </div>
   )
 }

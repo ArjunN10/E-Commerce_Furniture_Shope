@@ -4,6 +4,7 @@ import Nav from '../../Nav';
 import { Mycontext } from '../../../context/Context'
 import {MDBCard,MDBCardImage, MDBCardOverlay,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer, } from 'mdb-react-ui-kit';
 import {  useNavigate } from 'react-router-dom';
+import Footer from '../../Footer';
 
 function Bed() {
 const navigate=useNavigate()
@@ -49,6 +50,9 @@ const navigate=useNavigate()
     ))}
   </div>
 </MDBContainer>
+<div className='mt-3'>
+      <Footer/>
+     </div>
     </div>
   )
 }

@@ -4,6 +4,8 @@ import { useContext ,useEffect} from 'react'
 import { Mycontext } from '../../../context/Context'
 import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer,} from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../Footer';
+
 
 
 function  Chairs() {
@@ -38,6 +40,9 @@ function  Chairs() {
     ))}
   </div>
 </MDBContainer>
+<div className='mt-3'>
+      <Footer/>
+     </div>
 </>
   )
 }
