@@ -86,7 +86,9 @@ function Login() {
                 or <Link to={"/signup"}>sign up?</Link>
               </p>
               <p>                
-                 <Link to={"/"}><MDBBtn className="btn-success">Home</MDBBtn></Link>
+                 <Link to={"/"}>
+                  <MDBBtn 
+                  className="btn-success">Home</MDBBtn></Link>
               </p>
              </form>
              </MDBCol>

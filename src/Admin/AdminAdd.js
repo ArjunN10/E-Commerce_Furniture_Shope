@@ -16,7 +16,7 @@ const productOffer=item.target.offer.value
 const producDescription=item.target.description.value
 
 item.target.reset()
-setproducts([...products,{name:productname,src:productUrl,price:productPrice,price2:productOffer,description:producDescription,id:Date.now()}])
+setproducts([...products,{name:productname,src:productUrl,price:productPrice,price2:productOffer,description:producDescription,id:products.length+1}])
 }
 
 
@@ -25,16 +25,11 @@ setproducts([...products,{name:productname,src:productUrl,price:productPrice,pri
    
    <div className="container" >
       <h1>Add Product</h1>
-      <form onSubmit={handleAdding}>
-
-        
+      <form onSubmit={handleAdding}>  
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>
           <input type="text" className="form-control" id="name"  required />
         </div>
-
-
-    
         <div className="mb-3">
           <label htmlFor="src" className="form-label">Image:</label>
           <input type="text" className="form-control" id="url"  required />
@@ -44,7 +39,7 @@ setproducts([...products,{name:productname,src:productUrl,price:productPrice,pri
           <input type="text" className="form-control" id="price"   required />
         </div>
         <div className="mb-3">
-          <label htmlFor="price2" className="form-label">Price 2:</label>
+          <label htmlFor="price2" className="form-label">Offer Price:</label>
           <input type="text" className="form-control" id="offer"   required />
         </div>
         <div className="mb-3">

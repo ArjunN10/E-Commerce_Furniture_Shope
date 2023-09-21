@@ -37,6 +37,7 @@ function ProductCart() {
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
+
       <MDBCol>
         <MDBCard onClick={()=>navigate('/bed')} className='h-100 w-75 hover-shadow bg-image hover-zoom'>
           <MDBCardImage
@@ -66,7 +67,8 @@ function ProductCart() {
           </MDBCardBody>
         </MDBCard>
         </MDBCol>
-        <MDBCol>
+
+        <MDBCol> 
         <MDBCard onClick={()=>navigate('/table')} className='h-100 w-75 hover-shadow  bg-image hover-zoom'>
           <MDBCardImage
             src='https://www.ikea.com/us/en/images/products/jokkmokk-table-and-4-chairs-antique-stain__0870916_pe716638_s5.jpg?f=xxs'
@@ -80,12 +82,14 @@ function ProductCart() {
           </MDBCardBody>
         </MDBCard>
         </MDBCol>
+
         <MDBCol>
         <MDBCard onClick={()=>navigate('/wardrobe')} className='h-100 w-75 hover-shadow  bg-image hover-zoom'>
           <MDBCardImage
             src="https://www.ikea.com/us/en/images/products/pax-bergsbo-wardrobe-dark-gray-dark-gray__1154692_pe886251_s5.jpg?f=xxs"
             alt='Photos'
-            position='top'/>
+            position='top'
+            />
           <MDBCardBody>
             <MDBCardTitle>Wardrobes</MDBCardTitle>
             <MDBCardText>
@@ -94,6 +98,31 @@ function ProductCart() {
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
+
+        <MDBCol>
+        <MDBCard 
+        // onClick={()=>navigate('/wardrobe')} 
+        className='cardst h-100 w-75 hover-shadow  bg-image hover-zoom'>
+          <MDBCardImage
+            src="https://m.media-amazon.com/images/I/61cox47w3NL._AC_UL800_FMwebp_QL65_.jpg"
+            alt='Photos'
+            position='top'
+            />
+          <MDBCardBody>
+            <MDBCardTitle>Storage</MDBCardTitle>
+            <MDBCardText>
+            redefine versatile storage - Explore Our Storage Furniture Selection
+            </MDBCardText>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+
+
+
+      
+
+
+
     </MDBRow>
   <MDBCol>
     <MDBCard className='d-flex m-auto w-100  mt-2 mb-0 '>  
@@ -101,24 +130,24 @@ function ProductCart() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={1}
-        src={require("../components/products/images/cover8new.jpg")}
+        src={require("../images/cover8new.jpg")}
         alt='photos'
       />
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={2}
-        src={require("../components/products/images/cover4newnew.jpg")} 
+        src={require("../images/cover4newnew.jpg")} 
         alt='photos'
       />
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={3}
-        src={require("../components/products/images/cover9.png")} 
+        src={require("../images/cover9.png")} 
         alt='photos'
       />
     </MDBCarousel>
     <MDBCardImage 
-     src={require("../components/products/images/4415159.jpg")}
+     src={require("../images/4415159.jpg")}
      onClick={()=>navigate('/allproducts')} 
      className="card-img-top" alt="Photos" />
     </MDBCard> 

@@ -1,6 +1,6 @@
 import Nav from './Nav'
 import Carousal from './products/Carousal'
-import ProductCart from './ProductCart'
+import ProductCart from './products/Catogery/ProductCart'
 import Footer from './Footer'
 
 

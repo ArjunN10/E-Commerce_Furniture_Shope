@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext,} from 'react'
 import { useParams } from 'react-router-dom'
 import { Mycontext } from '../context/Context'
 
@@ -11,7 +11,7 @@ function AdminEdit() {
   const productID=id
 
   const editfilter=products.filter((item)=>parseFloat(item.id) === parseFloat(productID))
-  console.log(editfilter);
+  // console.log(editfilter);
   
   const handleEditChange = (event) => {
     event.preventDefault()
@@ -24,8 +24,7 @@ function AdminEdit() {
     const productPrice = event.target.price.value  || e.price;
     const productOffer = event.target.offer.value  || e.price2;
 
-    if (e.id === parseInt(productID)) {
-       
+    if (e.id === parseInt(productID)) { 
       return {
         ...products,
         id:e.id,
@@ -35,9 +34,7 @@ function AdminEdit() {
         price: productPrice ,
         price2: productOffer,
         description: productDescription,
-    };
-      
-      
+    };  
     } 
     else {
       return e;
@@ -46,10 +43,6 @@ function AdminEdit() {
   setproducts(updatedProduct)
    
     };
-
-
-
-
 
 
   return (
@@ -67,9 +60,6 @@ function AdminEdit() {
            id="name" 
             />
         </div>
-
-
-    
         <div className="mb-3">
           <label htmlFor="src" className="form-label">Image:</label>
           <input 
@@ -95,7 +85,7 @@ function AdminEdit() {
             />
         </div>
         <div className="mb-3">
-          <label htmlFor="price2" className="form-label">Price 2:</label>
+          <label htmlFor="price2" className="form-label">Offer price:</label>
           <input 
           type="text" 
           className="form-control" 

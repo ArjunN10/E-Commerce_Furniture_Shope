@@ -8,7 +8,6 @@ import {
   MDBInput,
   MDBTypography,
 } from "mdb-react-ui-kit";
-// import { productsList } from './Productslist';
 import { useNavigate, useParams } from "react-router-dom";
 import { Mycontext } from "../../../context/Context";
 import Nav from "../../Nav";
@@ -16,17 +15,18 @@ import Footer from "../../Footer";
 
 function Productview() {
   const navigate = useNavigate();
-  const { products, addcart, setaddcart, username } = useContext(Mycontext);
+  const { products, addcart, setaddcart,loggedIn} = useContext(Mycontext);
   const { id } = useParams();
 
-  // const productID = addcart.map((price) => price.id);
-  // console.log(productID);
+  
   const productfilter = products.filter((p) => p.id === parseInt(id));
-  const idproduct = (e) => {
+
+  const idproduct = () => {
     // console.log(username);
-    if (username) {
+    if (loggedIn===false) {
       if (addcart.includes(productfilter[0])) {
         alert("Your product already in your cart");
+        navigate("/");
       } else {
         // console.log(id);
         setaddcart([...addcart, ...productfilter]);
@@ -37,6 +37,7 @@ function Productview() {
       navigate("/");
     }
   };
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -109,7 +110,7 @@ function Productview() {
                           color="primary"
                           className="ms-1"
                           id={Pro.id}
-                          onClick={idproduct}
+                          onClick={()=>idproduct()}
                         >
                           Add to cart{" "}
                           <i className="fas fa-shopping-cart ms-1"></i>
@@ -120,7 +121,7 @@ function Productview() {
                           color="outline-primary"
                           size="lg"
                           id={Pro.id}
-                          onClick={idproduct}
+                          onClick={()=>idproduct()}
                         >
                           BUY NOW
                         </MDBBtn>
