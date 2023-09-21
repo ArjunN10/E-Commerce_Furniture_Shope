@@ -11,6 +11,7 @@ import {
   MDBContainer,
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer";
 
 function Tables() {
   const navigate = useNavigate();
@@ -53,6 +54,9 @@ function Tables() {
           ))}
         </div>
       </MDBContainer>
+      <div className='mt-3'>
+     <Footer/>
+     </div>
     </>
   );
 }

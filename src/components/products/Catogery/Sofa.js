@@ -6,6 +6,7 @@ import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer,
     // MDBRow, MDBCol
   } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../Footer';
 
 
 function Sofa() {
@@ -40,6 +41,9 @@ function Sofa() {
     ))}
   </div>
 </MDBContainer>
+<div className='mt-3'>
+    <Footer/>
+     </div>
     </div>
   )
 }

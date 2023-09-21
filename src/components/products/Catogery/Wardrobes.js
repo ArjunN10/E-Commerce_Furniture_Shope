@@ -5,6 +5,7 @@ import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer,
     // MDBRow, MDBCol
   } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../Footer';
 
 function Wardrobes() {
 const navigate=useNavigate()
@@ -38,6 +39,9 @@ const navigate=useNavigate()
   </div>
 </MDBContainer>
     </div>
+    <div className='mt-3'>
+      <Footer/>
+     </div>
     </div>
   )
 }
