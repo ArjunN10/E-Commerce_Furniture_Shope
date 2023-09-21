@@ -79,7 +79,12 @@ function Signup() {
 
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="lock me-3" size="lg" />
-                  <MDBInput label="Password" id="pwd" type="password" />
+                  <MDBInput 
+                  label="Password" 
+                  id="pwd" 
+                  type="password" 
+                  required
+                  />
                 </div>
 
                 <div className="d-flex flex-row align-items-center mb-4">
@@ -88,13 +93,18 @@ function Signup() {
                     label="Repeat your password"
                     id="repwd"
                     type="password"
+                    required
                   />
                 </div>
-                <MDBBtn className="mb-4" size="lg" onSubmit={()=>navigate('/login')}>
+                <MDBBtn
+                 className="mb-4 ms-4" 
+                 size="lg" 
+                 onSubmit={()=>navigate('/login')}
+                 >
                   Register
                 </MDBBtn>
                 <p className="ms-4">
-                  or <Link to={"/login"}>Login</Link>
+                  or  <Link to={"/login"}><MDBBtn className="btn-primary">Login</MDBBtn></Link>
                 </p>
               </form>
             </MDBCol>

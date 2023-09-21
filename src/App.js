@@ -1,5 +1,4 @@
 
-// import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import React, { useState } from 'react'
@@ -12,7 +11,6 @@ import Tables from './components/products/Catogery/Tables';
 import Bed from './components/products/Catogery/Bed';
 import Wardrobes from './components/products/Catogery/Wardrobes';
 import Chairs from './components/products/Catogery/Chairs';
-// import Profile from './profile/Profile';
 import Productview from './components/products/Catogery/Productview';
 import Allproducts from './components/products/Catogery/Allproducts';
 import Addcart from './components/products/Catogery/Addcart';
@@ -35,7 +33,7 @@ const [products,setproducts]=useState(productsList)
 const [user,setuser]=useState([])
 const [username,setusername]=useState([])
 const [addcart,setaddcart]=useState([])
-const [Payment,setpayment]=useState([])
+// const [Payment,setpayment]=useState([])
 const [loggedIn, setLoggedIn] = useState(true);
   return (
     <>
@@ -59,7 +57,7 @@ const [loggedIn, setLoggedIn] = useState(true);
   <Route path="/adminhome/" element={<AdminHome />}>
   <Route path="adminAllproduct" element={<AdminAllproduct />} />
   <Route path="adminAdd" element={<AdminAdd />} />
-  <Route path="adminedit" element={<AdminEdit />} />
+  <Route path="adminedit/:id" element={<AdminEdit />} />
   <Route path="adminUserlist" element={<AdminUserList/>} />
   <Route path="AdminPageBeds" element={<AdminPageBeds/>} />
   <Route path="AdminPageSofas" element={<AdminPageSofas/>} />

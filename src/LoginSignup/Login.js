@@ -7,14 +7,14 @@ import {
   MDBCol,
   MDBRow,
   MDBInput,
-  MDBIcon,
+  // MDBIcon,
 } from "mdb-react-ui-kit";
 import { Link, useNavigate } from "react-router-dom";
 import { Mycontext } from "../context/Context";
 
 function Login() {
   const navigate = useNavigate();
-  const { user, setusername,setLoggedIn,AdminID} = useContext(Mycontext);
+  const { user, setusername,setLoggedIn} = useContext(Mycontext);
   const login = (e) => {
     e.preventDefault();
     const eml = e.target.email.value;
@@ -32,9 +32,8 @@ function Login() {
        else {
         alert("Invalid Details");
       }
-    }else if(eml=="admin@gmail.com" && password==123){
+    }else if(eml=="admin@gmail.com" && password=="admin"){
       navigate('/adminhome')
-      // setLoggedIn(prevvalue=>prevvalue=!prevvalue)
 
     } else {
       alert("user not avilable");

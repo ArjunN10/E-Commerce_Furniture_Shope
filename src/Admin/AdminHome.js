@@ -9,7 +9,7 @@ function AdminHome() {
 
   return (
     <div className='d-flex'>
-      <div className='sticky-left'>
+      <div className=''>
         <Adminsidebar />
       </div>
 
@@ -19,7 +19,7 @@ function AdminHome() {
         </div>
       )}
 
-      <div>
+      <div className='overflow-auto'>
         <Outlet />
       </div>
     </div>

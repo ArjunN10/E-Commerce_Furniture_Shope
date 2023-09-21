@@ -1,6 +1,5 @@
 import { Button, Nav, NavDropdown, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './AdminSidebar.css' 
 
 
 function AdminSidebar() {

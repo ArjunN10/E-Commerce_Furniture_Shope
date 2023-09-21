@@ -11,13 +11,13 @@ function AdminAllproduct() {
   const {products,setproducts}=useContext(Mycontext)
 
   return (
-    <div>
+    <div className="">
 {/* <div className='sticky-top'>
  
  <Adminsidebar/>
 </div> */}
 
-<MDBTable responsive className='caption-top'>
+<MDBTable responsive className='caption-top '>
 <caption className='ps-5 pt-5'>TOTAL PRODUCTS:{}</caption>
       <MDBTableHead>
         <tr>
@@ -30,6 +30,7 @@ function AdminAllproduct() {
           <th scope='col'>Offer Price</th>
         </tr>
       </MDBTableHead>
+     
       {products.map((item,index)=>
      
       <MDBTableBody>
@@ -65,7 +66,7 @@ function AdminAllproduct() {
             <MDBBtn 
             color='link'
             rounded size='sm'
-            onClick={()=>navigate('/adminedit')}>
+            onClick={()=>navigate(`/adminhome/adminedit/${item.id}`)}>
               Edit
             </MDBBtn>
           </td>
@@ -82,6 +83,7 @@ function AdminAllproduct() {
                </tr>
       </MDBTableBody>
        )}
+      
     </MDBTable>
     </div>
   )

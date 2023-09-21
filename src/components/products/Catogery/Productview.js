@@ -19,7 +19,7 @@ function Productview() {
   const { products, addcart, setaddcart, username } = useContext(Mycontext);
   const { id } = useParams();
 
-  const productID = addcart.map((price) => price.id);
+  // const productID = addcart.map((price) => price.id);
   // console.log(productID);
   const productfilter = products.filter((p) => p.id === parseInt(id));
   const idproduct = (e) => {
