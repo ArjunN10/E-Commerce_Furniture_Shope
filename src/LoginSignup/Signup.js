@@ -43,7 +43,8 @@ function Signup() {
 
   return (
     <MDBContainer fluid>
-      <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
+<MDBCard className="text-black m-5" style={{ borderRadius: "25px", boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px" }}>
+
         <MDBCardBody>
           <MDBRow>
             <MDBCol
@@ -52,9 +53,9 @@ function Signup() {
               className="order-2 order-lg-1 d-flex flex-column align-items-center"
             >
               <form onSubmit={register}>
-                <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                <h3 classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 ">
                   Sign up
-                </p>
+                </h3>
 
                 <div className="d-flex flex-row align-items-center mb-4 ">
                   <MDBIcon fas icon="user me-3" size="lg" />
@@ -114,7 +115,8 @@ function Signup() {
               className="order-1 order-lg-2 d-flex align-items-center"
             >
               <MDBCardImage
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                 src={require("../components//products/images/cover15new.jpg")} 
+                 style={{ borderRadius: "20px" }}
                 fluid
               />
             </MDBCol>
