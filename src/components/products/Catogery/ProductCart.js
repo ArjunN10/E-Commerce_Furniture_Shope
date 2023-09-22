@@ -110,7 +110,7 @@ function ProductCart() {
             />
              <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
              <div className='d-flex justify-content-center align-items-center h-100'>
-           <p className='text-white mb-0'>Can you see me?</p>
+           <h4 className='text-white mb-0'>Available Soon...</h4>
            </div>
           </div>
           <MDBCardBody>
@@ -122,12 +122,6 @@ function ProductCart() {
         </MDBCard>
       </MDBCol>
 
-
-
-      
-
-
-
     </MDBRow>
   <MDBCol>
     <MDBCard className='d-flex m-auto w-100  mt-2 mb-0 '>  
@@ -138,6 +132,7 @@ function ProductCart() {
         src={require("../images/cover8new.jpg")}
         alt='photos'
       />
+     
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={2}
@@ -151,6 +146,10 @@ function ProductCart() {
         alt='photos'
       />
     </MDBCarousel>
+    <MDBCardImage 
+     src='https://i.pinimg.com/originals/f9/ba/70/f9ba70456077b039b70d04ce8ec508ad.gif'
+     onClick={()=>navigate('/allproducts')} 
+     className="card-img-top" alt="Photos" />
     <MDBCardImage 
      src={require("../images/4415159.jpg")}
      onClick={()=>navigate('/allproducts')} 

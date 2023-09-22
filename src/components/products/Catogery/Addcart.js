@@ -11,8 +11,8 @@ import {
         MDBRow,
         MDBTypography,
       } from "mdb-react-ui-kit";
-    import { useNavigate } from "react-router-dom";
-    import { Mycontext } from "../../../context/Context";
+import { useNavigate } from "react-router-dom";
+import { Mycontext } from "../../../context/Context";
 import Counter from "../Counter";
 import Footer from "../../Footer";
 

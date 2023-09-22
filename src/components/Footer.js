@@ -68,19 +68,6 @@ return (
         </section>
   </MDBContainer>
   
-{/* <div style={{display:"-webkit-inline-flex w-100 mx-1"}}>
-  <div class="hnf-footer__paymentOptions" >
-        <span class="hnf-payment-logo hnf-payment-logo--medium" aria-label="Visa">
-          <img class="hnf-payment-logo__img" src="https://www.ikea.com/global/assets/logos/external-payment-providers/visa.svg" alt="Visa"/>
-        </span>
-  </div>
-  <div>
-        <span class="hnf-payment-logo hnf-payment-logo--medium" aria-label="Visa">
-          <img class="hnf-payment-logo__img" src="https://www.ikea.com/global/assets/logos/external-payment-providers/visa.svg" alt="Visa"/>
-        </span>
-        </div>
-  </div> */}
-
 <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
   <div className='container '>
     <div className='row'>

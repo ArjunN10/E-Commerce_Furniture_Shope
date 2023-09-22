@@ -13,6 +13,7 @@ import {
 import { Mycontext } from "../context/Context";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Signup() {
   const { user, setuser } = useContext(Mycontext);
@@ -52,8 +53,8 @@ function Signup() {
               lg="6"
               className="order-2 order-lg-1 d-flex flex-column align-items-center"
             >
-              <form onSubmit={register}>
-                <h3 classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 ">
+              <form className='mt-5'onSubmit={register}>
+                <h3 classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4  ">
                   Sign up
                 </h3>
 
@@ -123,6 +124,9 @@ function Signup() {
           </MDBRow>
         </MDBCardBody>
       </MDBCard>
+      <div className='mt-3'>
+    <Footer/>
+     </div>
     </MDBContainer>
   );
 }
