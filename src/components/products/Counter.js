@@ -24,6 +24,7 @@ const Counter = (props) => {
         <MDBBtn variant="light" className="px-3 me-2" onClick={decrementCount}>
           <img
             src="https://img.icons8.com/?size=2x&id=gzeZVqbrQKDg&format=png"
+            alt="icons"
             style={{ maxWidth: "20px", height: "auto" }}
           />
         </MDBBtn>
@@ -35,6 +36,7 @@ const Counter = (props) => {
         <MDBBtn variant="light" className="px-3 ms-2" onClick={incrementCount}>
           <img
             src="https://img.icons8.com/?size=50&id=63650&format=png"
+            alt="icon"
             style={{ maxWidth: "20px", height: "auto" }}
           />
         </MDBBtn>

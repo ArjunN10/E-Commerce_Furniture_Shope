@@ -41,16 +41,12 @@ function Addcart() {
         setCount(count - 1);
       }
     };
+    console.log(increaseCount,decreaseCount);
 
     const totalsum = addcart.map((priceid) => priceid.price2 * priceid.qty);
     const totprice = totalsum.reduce((acc, val) => acc + val, 0);
    
-    
   
-    // const calculateTotal = () => {
-    //   return addcart.reduce((total, item) => total + item.price * count, 0);
-    // };
-
 
   return (
     <section className="h-auto h-custom" style={{ backgroundColor: "#eee" }}>

@@ -1,6 +1,7 @@
 import React, { useContext,} from 'react'
 import { useParams } from 'react-router-dom'
 import { Mycontext } from '../context/Context'
+import {MDBContainer,MDBRow, MDBCol,MDBCard,MDBListGroupItem ,MDBCardHeader,MDBListGroup} from 'mdb-react-ui-kit'
 
 
 function AdminEdit() {
@@ -47,11 +48,17 @@ function AdminEdit() {
 
   return (
     <>
+     <MDBContainer
+        fluid
+        className="p-4 background-radial-gradient overflow-hidden"
+      >
+           <MDBRow>
+          <MDBCol md="6" className="position-relative">
     <div>
         <div className="container" >
       <h1>Edit Product</h1>
       {editfilter.map((e)=>
-      <form onSubmit={handleEditChange}>
+      <form onSubmit={handleEditChange} key={e.id}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>
           <input 
@@ -106,6 +113,43 @@ function AdminEdit() {
     )}
     </div>
     </div>
+    </MDBCol>
+    <MDBCol className='ms-5'>
+      {editfilter.map((e)=>
+    <MDBCard 
+    style={{boxshadow: 'rgb(38, 57, 77) 0px 20px 30px -10px'}}  key={e.id}>
+       <MDBCardHeader className="mx-auto rounded text-primary">DETAILS</MDBCardHeader>
+      <MDBListGroup flush>
+        <MDBListGroupItem>
+         <label className='bg-secondary rounded px-3 text-white'>Name:-</label> 
+           {e.name}
+          </MDBListGroupItem>
+        <MDBListGroupItem>
+        <label className='bg-secondary rounded px-3 text-white'>Image:-</label> 
+          {e.src}
+          </MDBListGroupItem>
+        <MDBListGroupItem>
+        <label className='bg-secondary rounded px-3 text-white'>Type:-</label> 
+          {e.type}
+          </MDBListGroupItem>
+        <MDBListGroupItem>
+        <label className='bg-secondary rounded px-3 text-white'>Price:-</label> 
+          {e.price}
+          </MDBListGroupItem>
+        <MDBListGroupItem>
+        <label className='bg-secondary rounded px-3 text-white'>Offer Price:-</label> 
+          {e.price2}
+          </MDBListGroupItem>
+        <MDBListGroupItem>
+        <label className='bg-secondary rounded px-3 text-white'>Description:-</label> 
+          {e.description}
+          </MDBListGroupItem>
+      </MDBListGroup>
+    </MDBCard>
+    )}
+    </MDBCol>
+    </MDBRow>
+      </MDBContainer>
     </>
   )
 }

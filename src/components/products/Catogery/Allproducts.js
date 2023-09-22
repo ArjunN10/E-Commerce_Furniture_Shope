@@ -7,7 +7,7 @@ import Footer from '../../Footer';
 
 
 function Allproducts() {
-    const {products,setproducts}=useContext(Mycontext)
+    const {products}=useContext(Mycontext)
     // console.log(productsList);
     const navigate=useNavigate()
     useEffect(() => {

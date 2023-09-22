@@ -80,7 +80,7 @@ function Login() {
                     required
                   />
                   <MDBBtn className="w-100 mb-4" size="md">
-                    sign up
+                    sign in
                   </MDBBtn>
 
                   <div className="text-center">

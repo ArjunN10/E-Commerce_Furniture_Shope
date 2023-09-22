@@ -149,7 +149,9 @@ function ProductCart() {
     <MDBCardImage 
      src='https://i.pinimg.com/originals/f9/ba/70/f9ba70456077b039b70d04ce8ec508ad.gif'
      onClick={()=>navigate('/allproducts')} 
-     className="card-img-top" alt="Photos" />
+     className="card-img-top"
+      alt="Photos" />
+    
     <MDBCardImage 
      src={require("../images/4415159.jpg")}
      onClick={()=>navigate('/allproducts')} 
