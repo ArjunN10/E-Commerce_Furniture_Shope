@@ -15,36 +15,33 @@ import Footer from "../../Footer";
 
 function Productview() {
   const navigate = useNavigate();
-  const { products, addcart, setaddcart,loggedIn} = useContext(Mycontext);
+  const { products, addcart, setaddcart, loggedIn } = useContext(Mycontext);
   const { id } = useParams();
 
-  
   const productfilter = products.filter((p) => p.id === parseInt(id));
 
   const idproduct = () => {
-    // console.log(username);
-    if (loggedIn===false) {
+    if (loggedIn === false) {
       if (addcart.includes(productfilter[0])) {
-        alert("Your product already in your cart");
+        alert("Your product is already in your cart");
         navigate("/");
       } else {
-        // console.log(id);
         setaddcart([...addcart, ...productfilter]);
         navigate("/addcart");
       }
     } else {
-      alert("must login");
+      alert("You must log in");
       navigate("/");
     }
   };
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <div className=" sticky-top">
+      <div className="sticky-top">
         <Nav />
       </div>
       {productfilter.map((Pro) => (
@@ -55,12 +52,13 @@ function Productview() {
                 <MDBCol md="6" mb="4">
                   <MDBCard
                     style={{
-                      boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
                     }}
                   >
                     <img
                       src={Pro.src}
-                      className="img-fluid hover-shadow card-img-top "
+                      className="img-fluid hover-shadow card-img-top"
                       alt="Product"
                     />
                   </MDBCard>
@@ -70,7 +68,8 @@ function Productview() {
                   <MDBCard
                     className="md-6 mb-0"
                     style={{
-                      boxShadow:"rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                      boxShadow:
+                        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
                     }}
                   >
                     <div className="p-4">
@@ -96,24 +95,16 @@ function Productview() {
                       <p>{Pro.Discription}</p>
 
                       <form className="justify-content-left d-flex p-2">
-                        <div
-                          className="form-outline me-1"
-                          style={{ width: "100px" }}
-                        >
-                          <MDBInput
-                            type="number"
-                            defaultValue="1"
-                            label="Quantity"
-                          />
+                        <div className="form-outline me-1" style={{ width: "100px" }}>
+                          <MDBInput type="number" defaultValue="1" label="Quantity" />
                         </div>
                         <MDBBtn
                           color="primary"
                           className="ms-1"
                           id={Pro.id}
-                          onClick={()=>idproduct()}
+                          onClick={() => idproduct()}
                         >
-                          Add to cart{" "}
-                          <i className="fas fa-shopping-cart ms-1"></i>
+                          Add to cart <i className="fas fa-shopping-cart ms-1"></i>
                         </MDBBtn>
                       </form>
                       <div>
@@ -121,7 +112,7 @@ function Productview() {
                           color="outline-primary"
                           size="lg"
                           id={Pro.id}
-                          onClick={()=>idproduct()}
+                          onClick={() => idproduct()}
                         >
                           BUY NOW
                         </MDBBtn>
@@ -130,51 +121,46 @@ function Productview() {
                   </MDBCard>
                   <hr />
                   <MDBCard className="mt-0">
-                  <MDBContainer className="container exra-imges">
-              <MDBRow>
-                <MDBCol className=" mt-4 justify-content-center ps-5 "style={{height:"7rem"}}>
-                  <img
-                   src='https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png' 
-                   alt="icon"
-                   style={{ maxWidth: "50px", maxHeight: "50px" }}
-                  />
-                  <p>Returns Policy</p>
-                </MDBCol>
+                    <MDBContainer className="container extra-images">
+                      <MDBRow>
+                        <MDBCol className="mt-4 justify-content-center ps-5" style={{ height: "7rem" }}>
+                          <img
+                            src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png"
+                            alt="icon"
+                            style={{ maxWidth: "50px", maxHeight: "50px" }}
+                          />
+                          <p>Returns Policy</p>
+                        </MDBCol>
 
-                <MDBCol className="mt-4 justify-content-center ps-5"style={{height:"7rem"}}>
+                        <MDBCol className="mt-4 justify-content-center ps-5" style={{ height: "7rem" }}>
+                          <img
+                            src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png"
+                            alt="icon"
+                            style={{ maxWidth: "60px", maxHeight: "60px" }}
+                          />
+                          <p>1 year warranty</p>
+                        </MDBCol>
 
-                  <img 
-                   src='https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png' 
-                   alt="icon" 
-                   style={{ maxWidth: "60px", maxHeight: "60px" }}
-                   />
-                  <p>1 year warranty</p>
-
-                </MDBCol>
-
-                <MDBCol className="mt-4 justify-content-center ps-5 "style={{height:"7rem"}}>
-
-                  <img className="more-image" 
-                   src=' https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-top-brand._CB617044271_.png'  
-                   alt="icon" 
-                   style={{ maxWidth: "50px", maxHeight: "50px" }}
-                   />
-                  <p>Top Brand</p>
-
-                </MDBCol>
-                <MDBCol className=" mt-4 justify-content-center ps-5"style={{height:"7rem"}}>
-
-                  <img
-                   src='https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/Secure-payment._CB650126890_.png'  
-                   alt="icon" 
-                   style={{ maxWidth: "50px", maxHeight: "50px" }}
-                   />
-                  <p>Secure transaction</p>
-
-                </MDBCol>
-              </MDBRow>
-            </MDBContainer>
-            </MDBCard>
+                        <MDBCol className="mt-4 justify-content-center ps-5" style={{ height: "7rem" }}>
+                          <img
+                            className="more-image"
+                            src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-top-brand._CB617044271_.png"
+                            alt="icon"
+                            style={{ maxWidth: "50px", maxHeight: "50px" }}
+                          />
+                          <p>Top Brand</p>
+                        </MDBCol>
+                        <MDBCol className="mt-4 justify-content-center ps-5" style={{ height: "7rem" }}>
+                          <img
+                            src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/Secure-payment._CB650126890_.png"
+                            alt="icon"
+                            style={{ maxWidth: "50px", maxHeight: "50px" }}
+                          />
+                          <p>Secure transaction</p>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBContainer>
+                  </MDBCard>
                   <hr />
                   <MDBTypography className="mt-2 mb-0">
                     <div className="d-flex">
@@ -187,59 +173,54 @@ function Productview() {
                     </div>
                   </MDBTypography>
                   <MDBCard>
-                    <div className="container extra-images">
-                      <div className="row">
-                        <div
-                          className="col card mt-2"
-                          style={{
-                            height: "12rem",
-                            boxShadow:
-                              "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
-                          }}
-                        >
-                          <div className="pt-3">
-                            <h6>Bank Offer</h6>
-                            <p>
-                              Upto ₹1,500.00 discount on SBI Credit CardsUpto
-                              ₹1,500.00 discount on SBI Credit Cards
-                            </p>
-                          </div>
+                  <div className="container extra-images">
+                    <div className="row">
+                      <div
+                        className="col-12 col-md-6 col-lg-4 card mt-2"
+                        style={{
+                          boxShadow:
+                            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                        }}
+                      >
+                        <div className="pt-3">
+                          <h6>Bank Offer</h6>
+                          <p>
+                            Upto ₹1,500.00 discount on SBI Credit CardsUpto ₹1,500.00 discount on SBI Credit Cards
+                          </p>
                         </div>
-                        <div
-                          className="col card mt-2"
-                          style={{
-                            height: "12rem",
-                            boxShadow:
-                              "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
-                          }}
-                        >
-                          <div className="pt-3">
-                            <h6>No Cost EMI</h6>
-                            <p>
-                              Upto ₹3,377.13 EMI interest savings on ICICI
-                              Credit Card
-                            </p>
-                          </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-6 col-lg-4 card mt-2"
+                        style={{
+                          boxShadow:
+                            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                        }}
+                      >
+                        <div className="pt-3">
+                          <h6>No Cost EMI</h6>
+                          <p>
+                            Upto ₹3,377.13 EMI interest savings on ICICI Credit Card
+                          </p>
                         </div>
-                        <div
-                          className="col card mt-2"
-                          style={{
-                            height: "12rem",
-                            boxShadow:
-                              "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
-                          }}
-                        >
-                          <div className="pt-3">
-                            <h6>Partner Offers</h6>
-                            <p>
-                              Get GST invoice and save up to 28% on business
-                              purchases.
-                            </p>
-                          </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-6 col-lg-4 card mt-2"
+                        style={{
+                          boxShadow:
+                            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+                        }}
+                      >
+                        <div className="pt-3">
+                          <h6>Partner Offers</h6>
+                          <p>
+                            Get GST invoice and save up to 28% on business purchases.
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </MDBCard>
+                  </div>
+                </MDBCard>
+
                   <hr />
                 </MDBCol>
               </MDBRow>
@@ -248,8 +229,8 @@ function Productview() {
         </div>
       ))}
       <div className='mt-3'>
-    <Footer/>
-     </div>
+        <Footer />
+      </div>
     </>
   );
 }

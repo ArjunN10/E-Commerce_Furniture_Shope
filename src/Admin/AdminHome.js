@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Adminsidebar from './Adminsidebar';
+import './AdminHome.css'
 
 function AdminHome() {
   const location = useLocation();
@@ -8,8 +9,8 @@ function AdminHome() {
   const isHomePage = location.pathname === '/adminhome'; 
 
   return (
-    <div className='d-flex'>
-      <div className=''>
+    <div>
+      <div className='fixed-sidebar'>
         <Adminsidebar />
       </div>
 
@@ -19,7 +20,7 @@ function AdminHome() {
         </div>
       )}
 
-      <div className='overflow-auto'>
+      <div className='content'>
         <Outlet />
       </div>
     </div>

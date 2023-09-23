@@ -1,0 +1,54 @@
+/* Sidebar Styles */
+.fixed-sidebar {
+  width: 180px; /* Set the initial width of the sidebar for larger screens */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+  min-height: 100vh;
+  /* overflow-y: auto; */
+}
+
+/* Sidebar Links Styles */
+.fixed-sidebar a {
+  color: #7f3838;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.fixed-sidebar a:hover {
+  background-color: #e99a2c;
+}
+
+/* Content Area Styles */
+.content {
+  margin-left: 180px; /* Adjust the margin to match the sidebar width */
+  padding: 20px;
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+
+/* Media Query for Small Screens (Adjust as Needed) */
+@media (max-width: 992px) {
+  /* Collapse Sidebar for Smaller Screens */
+  .fixed-sidebar {
+    width: auto; /* Set the collapsed width for smaller screens */
+    position: static; /* Remove fixed positioning */
+    display: flex;
+    flex-direction: row; /* Display sidebar as a row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* Expand Content Area for Smaller Screens */
+  .content {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 60px; /* Add top margin to create space for sidebar row */
+    padding: 20px;
+    overflow-y: auto;
+  }
+}

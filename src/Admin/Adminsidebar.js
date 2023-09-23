@@ -43,7 +43,7 @@ function AdminSidebar() {
                 All Products
               </Button>
               <NavDropdown
-                title="Products Category"
+                title="Category"
                 id="products-dropdown"
                 className="w-100 text-white mb-4"
               >
