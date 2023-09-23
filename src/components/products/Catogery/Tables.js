@@ -9,32 +9,32 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBContainer,
+  MDBRow,
+  MDBCol,
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Footer";
 
 function Tables() {
   const navigate = useNavigate();
-  const { products,setproducts } = useContext(Mycontext);
+  const { products} = useContext(Mycontext);
   const FilterProduct = products.filter(
     (e) => e.type.toLowerCase() === "table"
   );
-  // console.log(FilterProduct);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-
-  
   return (
     <>
-      <div className=" sticky-top">
+      <div className="sticky-top">
         <Nav />
       </div>
       <MDBContainer className="container py-5">
-        <div className="d-flex flex-wrap ">
+        <MDBRow className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
           {FilterProduct.map((productsList) => (
-            <div key={productsList.id} className="w-25 p-2">
+            <MDBCol key={productsList.id} className="mb-4">
               <MDBCard
                 onClick={() => navigate(`/productview/${productsList.id}`)}
               >
@@ -50,13 +50,13 @@ function Tables() {
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
-            </div>
+            </MDBCol>
           ))}
-        </div>
+        </MDBRow>
       </MDBContainer>
-      <div className='mt-3'>
-     <Footer/>
-     </div>
+      <div className="mt-3">
+        <Footer />
+      </div>
     </>
   );
 }
