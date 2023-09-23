@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Adminsidebar from './Adminsidebar';
-import './AdminHome.css'
+import './AdminSidebar.css'
 
 function AdminHome() {
   const location = useLocation();
@@ -17,7 +17,7 @@ function AdminHome() {
       {isHomePage && (
         <div className="d-flex flex-column justify-content-center align-items-center mx-auto">
           <h3 style={{ fontFamily: 'monospace' }}>Welcome ADMIN...</h3>
-        </div>
+         </div>
       )}
 
       <div className='content'>
