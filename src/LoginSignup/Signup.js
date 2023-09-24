@@ -110,7 +110,7 @@ function Signup() {
                   className="mb-4 ms-4"
                   size="lg"
                   type="submit"
-                  onClick={() => navigate("/login")}
+                  // onClick={() => navigate("/login")}
                 >
                   Register
                 </MDBBtn>
