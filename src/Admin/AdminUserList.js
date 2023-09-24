@@ -5,12 +5,12 @@ import { Mycontext } from '../context/Context';
 function AdminUserList() {
   const {user}=useContext(Mycontext)
   console.log(user);
-  // const maxIndex = user.reduce((max, _, index) => Math.max(max, index), -1);
-  // console.log('Maximum Index:', maxIndex);
+
+  
   return (
     <div style={{width:'130vh',marginLeft:'70px',marginTop:'70px'}}>
         <MDBTable responsive className='caption-top '>
-      <caption>List of users</caption>
+      <caption>Total Registered users:{user.length}</caption>
       <MDBTableHead>
         <tr>
           <th scope='col'>NO</th>
@@ -29,7 +29,7 @@ function AdminUserList() {
       </MDBTableBody>
         
       )}
-       {/* <label className='mt-5'>Total users:{maxIndex}</label> */}
+       
     </MDBTable>
     </div>
   )

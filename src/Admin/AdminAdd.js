@@ -65,7 +65,7 @@ setproducts([...products,{name:productname,src:productUrl,price:productPrice,pri
         <button  className="btn btn-primary" >Add Product</button>
         <br/>
         <br/>
-        <button  className="btn btn-success"  onClick={()=>navigate('/admin')} >Back To All Product</button>
+        <button  className="btn btn-success"  onClick={()=>navigate('/adminhome/adminAllproduct')} >Back To All Product</button>
       </form>
     </div>
     </>

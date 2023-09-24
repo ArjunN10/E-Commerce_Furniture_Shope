@@ -9,6 +9,7 @@ export const productsList = [
       price2: 799,
       description: "A sleek and comfortable leather sofa for your living room.",
       qty: 1,
+      star:4,
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ export const productsList = [
       price2: 699,
       description: "A spacious and stylish sectional fabric sofa for your home.",
       qty: 1,
+      star:3,
     },
     {
       id: 3,
@@ -28,7 +30,8 @@ export const productsList = [
       price: "$699.99",
       price2: 702,
       description: "A luxurious leather sofa for your living room.",
-      qty: 1
+      qty: 1,
+      star:4,
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ export const productsList = [
       price: "$799.99",
       price2: 800,
       description: "Sleek and stylish L-shaped sofa with reversible chaise.",
-      qty: 1
+      qty: 1,
+      star:4,
     },
     {
       id: 5,
@@ -48,7 +52,8 @@ export const productsList = [
       price: "$599.99",
       price2: 600,
       description: "Soft and comfortable fabric sofa for your home.",
-      qty: 1
+      qty: 1,
+      star:2,
     },
     {
       id: 6,
@@ -58,7 +63,8 @@ export const productsList = [
       price: "$899.99",
       price2: 950,
       description: "Versatile sectional sofa that can be used as a sleeper.",
-      qty: 1
+      qty: 1,
+      star:2,
     },
     {
       id: 7,
@@ -68,7 +74,8 @@ export const productsList = [
       price: "$999.99",
       price2: 1000,
       description: "Classic Chesterfield sofa with a touch of vintage charm.",
-      qty: 1
+      qty: 1,
+      star:5,
     },
     {
       id: 8,
@@ -78,7 +85,8 @@ export const productsList = [
       price: "$499.99",
       price2: 499,
       description: "Space-saving loveseat for small living areas.",
-      qty: 1
+      qty: 1,
+      star:4,
     },
     {
       id: 9,
@@ -88,7 +96,8 @@ export const productsList = [
       price: "$749.99",
       price2: 800,
       description: "Plush velvet sofa with a modern design.",
-      qty: 1
+      qty: 1,
+      star:2,
     },
     {
       id: 10,
@@ -98,7 +107,8 @@ export const productsList = [
       price: "$799.99",
       price2: 820,
       description: "Reclining sofa with a rustic, cozy look.",
-      qty: 1
+      qty: 1,
+      star:3,
     },
     
 
@@ -116,6 +126,7 @@ export const productsList = [
       price2: 499,
       description: "A sturdy wooden bed frame for a comfortable night's sleep.",
       qty: 1,
+      star:5,
     },
     {
       id: 12,

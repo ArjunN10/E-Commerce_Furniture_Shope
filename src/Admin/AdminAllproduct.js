@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { MDBTable, MDBTableHead, MDBTableBody ,MDBBadge,MDBBtn} from 'mdb-react-ui-kit';
 // import AdminNav from './AdminNav';
 import { useContext } from 'react';
@@ -11,14 +10,11 @@ function AdminAllproduct() {
   const {products,setproducts}=useContext(Mycontext)
 
   return (
-    <div className="">
-{/* <div className='sticky-top'>
- 
- <Adminsidebar/>
-</div> */}
+    <>
+    <div >
 
 <MDBTable responsive className='caption-top '>
-<caption className='ps-5 pt-5'>TOTAL PRODUCTS:{}</caption>
+<caption className='ps-5 pt-5'><h4>TOTAL PRODUCTS:{products.length}</h4></caption>
       <MDBTableHead>
         <tr>
           <th scope='col'>ID/</th>
@@ -86,6 +82,7 @@ function AdminAllproduct() {
       
     </MDBTable>
     </div>
+    </>
   )
 }
 
